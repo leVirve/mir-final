@@ -1,4 +1,7 @@
 *.asv
 
+/rwc48mp3
+/ours
+
 # specific env
 get_env_variables.m

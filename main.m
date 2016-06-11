@@ -33,7 +33,14 @@ clear annotation_files listOfAnnotations_rwc path_gt_rwc path_au_rwc path_au_our
 % SM
 % ...
 %% segmentatoin by groundtruth
-songs_seg = segmentation_by_gt(listOfAnnotations, listOfSongs);
+songs_seg = get_gt_sgmts(listOfAnnotations);
+
+%%
+for i = 1:length(listOfSongs)
+    sgmts = get_audio_sgmts(listOfSongs{i}, songs_seg{i});
+    % do somthing on sgmts
+    % You can try sound(sgmts{1}.audio, sgmts{1}.fs);
+end
 
 %% Extract Features
 
