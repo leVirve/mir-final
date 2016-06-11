@@ -1,5 +1,7 @@
-%% set path
+%% clean
 clc; clear all; close all;
+
+%% set path
 [PATH_ANNOTATIONS, PATH_AUDIOS] = get_env_variables();
 
 %% initial
