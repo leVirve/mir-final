@@ -3,7 +3,7 @@ function [songs] = segmentation_by_gt( listOfAnnotaions , listOfSongs)
 songs = cell(size(listOfAnnotaions));
 for i = 1:length(listOfAnnotaions)
     fh = fopen(listOfAnnotaions{i});
-    C = textscan(fh, '%f %f %[^\n]');
+    C = textscan(fh, '%f %f %[^\r\n]');
     fclose(fh);
 
     ss = cell(size(C{1}));
