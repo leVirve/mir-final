@@ -38,10 +38,14 @@ clear annotation_files listOfAnnotations_rwc path_gt_rwc path_au_rwc path_au_our
 songs_seg = get_gt_sgmts(listOfAnnotations);
 
 %%
-for i = 1:length(listOfSongs)
-    sgmts = audio_sgmt(listOfSongs{i}, songs_seg{i});
-    % do somthing on sgmts
-    % You can try sound(sgmts{1}.audio, sgmts{1}.fs);
+w = 1024;
+h = 512;
+
+for i = 1:1%length(listOfSongs)
+    sgmts = get_audio_sgmts(listOfSongs{i}, songs_seg{i});
+    for j = 1:length(sgmts)
+        songs_seg{i}{j}.mfcc = extract_timbre_feature(sgmts{j}.audio',sgmts{j}.fs, w,h, 'mfcc');
+    end
 end
 
 %% Extract Features
