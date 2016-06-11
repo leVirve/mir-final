@@ -38,28 +38,40 @@ songs_seg = segmentation_by_gt(listOfAnnotations);
 
     % -- Select training and testing set randomly.
 
-pool_num = 10;
-train_num = 6;
-test_num = 4;
-rp = randperm(48);
+pool_num = 85;
+train_num = 51;
+test_num = 34;
+rp = randperm(pool_num);
 song_pool_index =  rp(1:pool_num);
 for i = 1:pool_num
     listOfSong_pool{i} = listOfSongs{song_pool_index(i)};
 end
 
+%%
 Xtrain = [];
 Ytrain = [];
 for i=1:train_num
     sgmts = get_audio_sgmts(listOfSong_pool{i}, songs_seg{i});
+    Xtemp = []; 
+    nXtemp = length(sgmts);
     for j = 1:length(sgmts)
+        clc;
+        fprintf('%d %d %s\n',i, j, listOfSong_pool{i});
+        
         x = extract_timbre_feature(sgmts{j}.audio',sgmts{j}.fs, w,h, 'mfcc');
-        Xtrain = [Xtrain; x'];
+        Xtemp = [Xtemp; x'];
+        
         if (strcmp(songs_seg{i}{j}.label, 'chorus')) 
             Ytrain = [Ytrain; 1];
         else
             Ytrain = [Ytrain; 0];
         end
     end
+    featMean = mean(Xtemp);
+    featSTD = std(Xtemp);
+    Xtemp = (Xtemp - repmat(featMean,nXtemp,1))./(repmat(featSTD,nXtemp,1)+eps);
+    
+    Xtrain = [Xtrain; Xtemp];
 end
 
 %%
@@ -67,15 +79,25 @@ Xvalidation = [];
 Yvalidation = [];
 for i=train_num + 1:train_num + test_num
     sgmts = get_audio_sgmts(listOfSong_pool{i}, songs_seg{i});
+    Xtemp = []; 
+    nXtemp = length(sgmts);
     for j = 1:length(sgmts)
+        clc;
+        fprintf('%d %d %s\n',i, j, listOfSong_pool{i});
         x = extract_timbre_feature(sgmts{j}.audio',sgmts{j}.fs, w,h, 'mfcc');
-        Xvalidation = [Xvalidation; x'];
+        Xtemp = [Xtemp; x'];
+        
         if (strcmp(songs_seg{i}{j}.label, 'chorus')) 
-        Yvalidation = [Yvalidation; 1];
-     else
-        Yvalidation = [Yvalidation; 0];
-     end
+            Yvalidation = [Yvalidation; 1];
+        else
+            Yvalidation = [Yvalidation; 0];
+        end
     end
+    featMean = mean(Xtemp);
+    featSTD = std(Xtemp);
+    Xtemp = (Xtemp - repmat(featMean,nXtemp,1))./(repmat(featSTD,nXtemp,1)+eps);
+    
+    Xvalidation = [Xvalidation; Xtemp];
      
 end
 %% train classifier
@@ -93,16 +115,11 @@ bestG = nan;
 for c=1:length(Cs)
     for g=1:length(Gs)
         
-%         model = svmtrain(Ytrain,Xtrain,sprintf('-t 2 -c %f -g %f',Cs(c),Gs(g)));
         model = svmtrain(Ytrain,Xtrain,sprintf('-t 2 -c %f -g %f -q',Cs(c),Gs(g))); % quiet mode
-        % actually, you can also use svmtrain(...,'-v 5') to implement 5-fold 
-        % cross validation, but we are not using that in this code
         
-        % Yvaliation is the groundtruth
-        % Ypred is the prediction result
         [Ypred, accuracy, ~] = svmpredict(Yvalidation, Xvalidation, model, '-q');
-        accuracy = accuracy(1); % the first one correponds to classification accuracy
-                                % accuracy = sum(Ypred==Yvalidation)/length(Yvalidation)
+        accuracy = accuracy(1); 
+                                
         disp(sprintf('c=%f g=%f accuracy=%f',Cs(c),Gs(g),accuracy))
 
         if accuracy > bestAccuraccy
@@ -123,38 +140,3 @@ for i = 1:size(Ypred, 1)
     ConfusionTable(Yvalidation(i), Ypred(i)) = ConfusionTable(Yvalidation(i), Ypred(i)) +1;
 end
 
-%%
-indexTrain = rp(1:train_num);
-indexTest = rp(train_num + 1:train_num +  test_num);
-
-Xtrain = [];
-for i = 1:train_num
-    it = indexTrain(i);
-    sgmts = get_audio_sgmts(listOfSongs{it}, songs_seg{it});
-    for j = 1:length(sgmts)
-        x = extract_timbre_feature(sgmts{j}.audio',sgmts{j}.fs, w,h, 'mfcc');
-        Xtrain = [Xtrain, x];
-    end
-    
-end
-
-
-
-% w = 1024;
-% h = 512;
-% 
-% 
-% for i = 1:1%length(listOfSongs)
-%     sgmts = get_audio_sgmts(listOfSongs{i}, songs_seg{i});
-%     for j = 1:length(sgmts)
-%         songs_seg{i}{j}.mfcc = extract_timbre_feature(sgmts{j}.audio',sgmts{j}.fs, w,h, 'mfcc');
-%     end
-% end
-
-
-%   - thumbnailing
-%   - MFCC, Timbre, Brightness, ...etc
-
-%% SVM
-
-%% Validation
