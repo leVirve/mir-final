@@ -41,9 +41,14 @@ songs_seg = get_gt_sgmts(listOfAnnotations);
 w = 1024;
 h = 512;
 
+chroma_params.w = w;
+chroma_params.gamma = 10;
+chroma_params.visualize = 0;
+
 for i = 1:1%length(listOfSongs)
-    sgmts = get_audio_sgmts(listOfSongs{i}, songs_seg{i});
+    sgmts = audio_sgmt(listOfSongs{i}, songs_seg{i});
     for j = 1:length(sgmts)
+        songs_seg{i}{j}.chroma = gen_chroma(sgmts{j}.audio', chroma_params);
         songs_seg{i}{j}.mfcc = extract_timbre_feature(sgmts{j}.audio',sgmts{j}.fs, w,h, 'mfcc');
     end
 end

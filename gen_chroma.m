@@ -1,14 +1,13 @@
-function [f_CLP] = gen_chroma(filename, gamma)
+function [chroma] = gen_chroma(f_audio, params)
 
-    [f_audio, sideinfo] = chroma_audio(filename);
     shiftFB = estimateTuning(f_audio);
 
-    paramPitch.winLenSTMSP = 4410;
+    paramPitch.winLenSTMSP = params.w;
     paramPitch.shiftFB = shiftFB;
-    [f_pitch, sideinfo] = audio_to_pitch_via_FB(f_audio, paramPitch, sideinfo);
+    [f_pitch, sideinfo] = audio_to_pitch_via_FB(f_audio, paramPitch, struct());
 
     paramCLP.applyLogCompr = 1;
-    paramCLP.factorLogCompr = gamma;
+    paramCLP.factorLogCompr = params.gamma;
     paramCLP.inputFeatureRate = sideinfo.pitch.featureRate;
-    paramCLP.visualize = 1;
-    [f_CLP, ~] = pitch_to_chroma(f_pitch, paramCLP, sideinfo);
+    paramCLP.visualize = params.visualize;
+    [chroma, ~] = pitch_to_chroma(f_pitch, paramCLP, sideinfo);
