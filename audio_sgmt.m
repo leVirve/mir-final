@@ -1,4 +1,4 @@
-function [sgmts] = get_audio_sgmts(audio_path, sgmts_info)
+function [sgmts] = audio_sgmt(audio_path, sgmts_info)
 
     [audio,fs] = audioread(audio_path);
     sgmts = cell(size(sgmts_info));

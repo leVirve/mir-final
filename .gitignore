@@ -1,5 +1,6 @@
 *.asv
 
+/annotations
 /rwc48mp3
 /ours
 
