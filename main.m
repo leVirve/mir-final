@@ -1,16 +1,14 @@
 %% set path
 clc; clear all; close all;
-
-PATH_ANNOTATIONS = 'annotations';
-PATH_AUDIOS = 'C:\Users\salas\Downloads';
+[PATH_ANNOTATIONS, PATH_AUDIOS] = get_env_variables();
 
 %% initial
 % -- RWC - GT and SONGS --
 
-path_gt_rwc = [PATH_ANNOTATIONS, '\AIST.RWC-MDB-P-2001.CHORUS'];
 path_au_rwc = [PATH_AUDIOS, '\rwc48mp3'];
 path_au_ours = [PATH_AUDIOS, '\ours'];
 
+path_gt_rwc = [PATH_ANNOTATIONS, '\AIST.RWC-MDB-P-2001.CHORUS'];
 annotation_files = dir([path_gt_rwc, '\RM-*.CHORUS.txt']);
 listOfAnnotations_rwc = fullfile(path_gt_rwc, {annotation_files.name})';
 
