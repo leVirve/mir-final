@@ -22,17 +22,16 @@ for i = 1:length(listOfAnnotaions)
 
 end
 
-for i = 1:1%length(listOfSongs)
+for i = 1:length(listOfSongs)
     [audio,fs] = audioread(listOfSongs{i});
     info = songs{i};
-    
-     info{sgmt}.fs = fs;
-
+   
     for sgmt = 1:length(info)
         st = floor(info{sgmt}.start * fs);
         ed = floor(info{sgmt}.end * fs);
         if(st == 0) st = 1; end
         info{sgmt}.audio = audio(st:ed);
+        info{sgmt}.fs = fs;
     end
     songs{i} = info;
 
