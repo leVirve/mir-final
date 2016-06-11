@@ -37,7 +37,7 @@ songs_seg = get_gt_sgmts(listOfAnnotations);
 
 %%
 for i = 1:length(listOfSongs)
-    sgmts = get_audio_sgmts(listOfSongs{i}, songs_seg{i});
+    sgmts = audio_sgmt(listOfSongs{i}, songs_seg{i});
     % do somthing on sgmts
     % You can try sound(sgmts{1}.audio, sgmts{1}.fs);
 end
