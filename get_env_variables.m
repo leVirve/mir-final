@@ -7,7 +7,7 @@ function [PATH_ANNOTATIONS, PATH_AUDIOS, PATH_AUDITORY_TOOLBOX] = get_env_variab
     addpath('.\toolbox\MATLAB-ChromaToolbox2.0');
     addpath('D:\VirtualMachines\MIRtoolbox1.6.1\MIRToolbox');
 
-    % Must add AuditoryToolbox with VARIABLE, due to some hacky solution
+    % Must add AuditoryToolbox through VARIABLE, due to some hacky solution
     % for solving the overwriting buit-in function `spectrogram` by AuditoryToolbox
     addpath(PATH_AUDITORY_TOOLBOX);
 
