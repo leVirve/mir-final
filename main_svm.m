@@ -5,17 +5,14 @@ clc; clear all; close all;
 %% initial
 % -- RWC - GT and SONGS --
 
-path_audio_rwc = '.\rwc48mp3';
+path_audio_rwc  = '.\rwc48mp3';
 path_audio_ours = '.\ours';
-path_ground_rwc = '.\annotations\AIST.RWC-MDB-P-2001.CHORUS';
 
-annotation_files = dir([path_ground_rwc, '\RM-*.CHORUS.txt']);
-
-listOfAnnotations_rwc = fullfile(path_ground_rwc, {annotation_files.name})';
-listOfAnnotations = [listOfAnnotations_rwc(1:48);...
-                     listfile(fullfile(PATH_ANNOTATIONS, 'Sa'))';...
-                     listfile(fullfile(PATH_ANNOTATIONS, 'Yi'))';...
-                     listfile(fullfile(PATH_ANNOTATIONS, 'Wu'))'];
+listOfAnnotations = [
+    listfile(fullfile(PATH_ANNOTATIONS, 'AIST.RWC-MDB-P-2001.CHORUS'), '\RM-*.CHORUS.txt', 1:48)';...
+    listfile(fullfile(PATH_ANNOTATIONS, 'Sa'))';...
+    listfile(fullfile(PATH_ANNOTATIONS, 'Yi'))';...
+    listfile(fullfile(PATH_ANNOTATIONS, 'Wu'))'];
 listOfSongs = [listfile(fullfile(path_audio_rwc, 'Disc1'))';...
                listfile(fullfile(path_audio_rwc, 'Disc2'))';...
                listfile(fullfile(path_audio_rwc, 'Disc3'))';...
@@ -23,7 +20,7 @@ listOfSongs = [listfile(fullfile(path_audio_rwc, 'Disc1'))';...
                listfile(fullfile(path_audio_ours, 'Yi'))';...
                listfile(fullfile(path_audio_ours, 'Wu'))'];
 
-clear annotation_files listOfAnnotations_rwc path_ground_rwc path_audio_rwc path_audio_ours;
+clear path_audio_rwc path_audio_ours;
 %% Segmentatoin Algo
 
 % SM
@@ -52,16 +49,16 @@ Xtrain = [];
 Ytrain = [];
 for i=1:train_num
     sgmts = audio_sgmt(listOfSong_pool{i}, songs_seg{i});
-    Xtemp = []; 
+    Xtemp = [];
     nXtemp = length(sgmts);
     for j = 1 : length(sgmts)
         clc;
         fprintf('%d %d %s\n', i, j, listOfSong_pool{i});
-        
+
         x = extract_timbre_feature(sgmts{j}.audio', sgmts{j}.fs, w, h, 'mfcc');
         Xtemp = [Xtemp; x'];
-        
-        if (strcmp(songs_seg{i}{j}.label, 'chorus')) 
+
+        if (strcmp(songs_seg{i}{j}.label, 'chorus'))
             Ytrain = [Ytrain; 1];
         else
             Ytrain = [Ytrain; 0];
@@ -78,15 +75,15 @@ Xvalidation = [];
 Yvalidation = [];
 for i = train_num + 1 : train_num + test_num
     sgmts = audio_sgmt(listOfSong_pool{i}, songs_seg{i});
-    Xtemp = []; 
+    Xtemp = [];
     nXtemp = length(sgmts);
     for j = 1:length(sgmts)
         clc;
         fprintf('%d %d %s\n', i, j, listOfSong_pool{i});
         x = extract_timbre_feature(sgmts{j}.audio', sgmts{j}.fs, w, h, 'mfcc');
         Xtemp = [Xtemp; x'];
-        
-        if (strcmp(songs_seg{i}{j}.label, 'chorus')) 
+
+        if (strcmp(songs_seg{i}{j}.label, 'chorus'))
             Yvalidation = [Yvalidation; 1];
         else
             Yvalidation = [Yvalidation; 0];
@@ -104,19 +101,19 @@ Cs = [1 10 100 1000]; % possible range of the parameter C
 Gs = [g0 g0/10 g0/100]; % possible range of the parameter gamma
 
 % default
-bestAccuraccy = 0.25; 
+bestAccuraccy = 0.25;
 bestModel = {};
 bestC = nan;
 bestG = nan;
 
 for c=1:length(Cs)
     for g=1:length(Gs)
-        
+
         model = svmtrain(Ytrain,Xtrain,sprintf('-t 2 -c %f -g %f -q', Cs(c), Gs(g))); % quiet mode
-        
+
         [Ypred, accuracy, ~] = svmpredict(Yvalidation, Xvalidation, model, '-q');
-        accuracy = accuracy(1); 
-                                
+        accuracy = accuracy(1);
+
         disp(sprintf('c=%f g=%f accuracy=%f', Cs(c), Gs(g), accuracy))
 
         if accuracy > bestAccuraccy
