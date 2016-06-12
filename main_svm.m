@@ -133,7 +133,7 @@ end
 
  ConfusionTable = zeros(4, 4);
 
-for i = 1:size(Ypred, 1)
+for i = 1 : size(Ypred, 1)
     ConfusionTable(Yvalidation(i), Ypred(i)) = ConfusionTable(Yvalidation(i), Ypred(i)) + 1;
 end
 
