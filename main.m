@@ -11,16 +11,19 @@ path_audio_rwc  = '.\rwc48mp3';
 path_audio_ours = '.\ours';
 
 listOfAnnotations = [
-    listfile(fullfile(PATH_ANNOTATIONS, 'AIST.RWC-MDB-P-2001.CHORUS'), '\RM-*.CHORUS.txt', 1:48)';...
-    listfile(fullfile(PATH_ANNOTATIONS, 'Sa'))';...
-    listfile(fullfile(PATH_ANNOTATIONS, 'Yi'))';...
-    listfile(fullfile(PATH_ANNOTATIONS, 'Wu'))'];
-listOfSongs = [listfile(fullfile(path_audio_rwc, 'Disc1'))';...
-               listfile(fullfile(path_audio_rwc, 'Disc2'))';...
-               listfile(fullfile(path_audio_rwc, 'Disc3'))';...
-               listfile(fullfile(path_audio_ours, 'Sa'))';...
-               listfile(fullfile(path_audio_ours, 'Yi'))';...
-               listfile(fullfile(path_audio_ours, 'Wu'))'];
+    listfile(fullfile(PATH_ANNOTATIONS, 'AIST.RWC-MDB-P-2001.CHORUS'), '\RM-*.CHORUS.txt', 1:48)';
+    listfile(fullfile(PATH_ANNOTATIONS, 'Sa'))';
+    listfile(fullfile(PATH_ANNOTATIONS, 'Yi'))';
+    listfile(fullfile(PATH_ANNOTATIONS, 'Wu'))';
+];
+listOfSongs = [
+    listfile(fullfile(path_audio_rwc, 'Disc1'))';
+    listfile(fullfile(path_audio_rwc, 'Disc2'))';
+    listfile(fullfile(path_audio_rwc, 'Disc3'))';
+    listfile(fullfile(path_audio_ours, 'Sa'))';
+    listfile(fullfile(path_audio_ours, 'Yi'))';
+    listfile(fullfile(path_audio_ours, 'Wu'))';
+];
 
 clear path_audio_rwc path_audio_ours;
 %% Segmentatoin Algo
