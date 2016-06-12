@@ -1,16 +1,15 @@
-function [files,files_short] = listfile(path)
+function [result] = listfile(path, rule, range)
 
-    names = dir(path);
-    files = {}; % complete file path
-    files_short = {}; % only the file name 
-
-    for n=1:length(names)
-
-        if strcmp(names(n).name, '.'), continue; end
-        if strcmp(names(n).name, '..'), continue; end
-
-        files{end+1} = fullfile(path,names(n).name);
-        files_short{end+1} = names(n).name;
-
+    % if no specified rule, default: list all files under `path`
+    if nargin == 1
+        rule = '\*';
     end
-end
+    
+    files = dir([path rule]);
+    files(1:2) = [];
+    result = fullfile(path, {files.name});
+
+    % if specify sub-list range
+    if nargin == 3
+        result = result(range);
+    end
