@@ -74,7 +74,7 @@ end
 Xvalidation = [];
 Yvalidation = [];
 for i = train_num + 1 : train_num + test_num
-    sgmts = get_audio_sgmts(listOfSong_pool{i}, songs_seg{i});
+    sgmts = audio_sgmt(listOfSong_pool{i}, songs_seg{i});
     Xtemp = []; 
     nXtemp = length(sgmts);
     for j = 1:length(sgmts)
