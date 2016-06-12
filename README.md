@@ -41,14 +41,9 @@ https://goo.gl/aR8GJ9
 - nothing
 
 ###- Format Policy
-	Type 1:
-		<start_time> <end_time> <tag_type>
-		example:
-				300 3600 chorusB
-	Type 2:
-		<start_time>:<end_time> <tag_type>
-		example:
-				300:3600 chorusB
+    <start_time (sec)> * 100 <end_time (sec)> * 100 "<tag_type> <tag_info>"
+    example:
+            300 3600 "chorus B"
 
 ###- All Annotations in RWC Dataset (optional)
 - bridge A
