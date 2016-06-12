@@ -1,0 +1,22 @@
+0	1100	"intro"
+1100	2700	"verse A"
+2700	4300 	"verse B"
+4300	4800	"pre-chorus"
+4800	6600	"chorus A"
+6600	7900	"chorus B"
+7900	9200	"bridge A"
+9200	11000	"verse A"
+11000	12500	"verse B"
+12500	13100	"pre-chorus"
+13100	14600	"chorus A"
+14600	16100	"chorus B"
+16100	17500	"bridge B"
+17500	22000	"bridge C"
+22000	23500	"chorus A"
+23500	25400	"chorus B"
+25400	26300	"bridge D"
+26300	27000	"ending"
+
+
+
+

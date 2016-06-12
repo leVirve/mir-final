@@ -1,0 +1,11 @@
+0 4200 "intro"
+4200 7600 "verse A"
+7600 10500 "chorus A"
+10500 13700 "chorus B"
+13700 17100 "inter"
+17100 20400 "verse A"
+20400 23300 "chorus A"
+23300 26500 "chorus B"
+26500 28000 "ending"
+28000 28400 "nothing"
+ 

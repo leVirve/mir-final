@@ -1,0 +1,8 @@
+0 1500 "intro"
+1500 4200 "verse"
+4200 5600 "pre-chorus"
+5600 8500 "chorus"
+8500 11100 "bridge"
+11100 12400 "pre-chorus"
+12400 18000 "chorus"
+18000 18300 "nothing"
