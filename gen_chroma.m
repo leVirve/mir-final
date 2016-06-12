@@ -1,6 +1,6 @@
 function [chroma] = gen_chroma(f_audio, params)
 
-    [~, PATH_AUDITORY_TOOLBOX] = get_env_variables();
+    [PATH_AUDITORY_TOOLBOX] = get_env_variables();
     rmpath(PATH_AUDITORY_TOOLBOX);
 
     shiftFB = estimateTuning(f_audio);
