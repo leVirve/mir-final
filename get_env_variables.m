@@ -2,7 +2,7 @@ function [PATH_AUDITORY_TOOLBOX] = get_env_variables()
 
     PATH_AUDITORY_TOOLBOX = '.\toolbox\AuditoryToolbox';
 
-    addpath('.\toolbox\MATLAB-ChromaToolbox2.0');
+    addpath('.\toolbox\ChromaToolbox');
     addpath('.\toolbox\MIRToolbox');
 
     % Must add AuditoryToolbox through VARIABLE, due to some hacky solution

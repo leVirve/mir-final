@@ -2,7 +2,7 @@
 clc; clear all; close all;
 
 %% set path
-[PATH_AUDITORY_TOOLBOX] = get_env_variables();
+PATH_AUDITORY_TOOLBOX = get_env_variables();
 
 %% initial
 % -- RWC - GT and SONGS --
