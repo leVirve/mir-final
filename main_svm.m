@@ -2,14 +2,14 @@
 clc; clear all; close all;
 
 %% set path
-PATH_AUDITORY_TOOLBOX = get_env_variables();
+[PATH_AUDITORY_TOOLBOX] = get_env_variables();
 
 %% initial
 % -- RWC - GT and SONGS --
 
 path_audio_rwc  = '.\rwc48mp3';
 path_audio_ours = '.\ours';
-path_annotation = '.\annotations'
+path_annotation = '.\annotations';
 
 listOfAnnotations = [
     listfile(fullfile(path_annotation, 'AIST.RWC-MDB-P-2001.CHORUS'), '\RM-*.CHORUS.txt', 1:48)';
