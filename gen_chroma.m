@@ -16,3 +16,4 @@ function [chroma] = gen_chroma(f_audio, params)
     [chroma, ~] = pitch_to_chroma(f_pitch, paramCLP, sideinfo);
 
     addpath(PATH_AUDITORY_TOOLBOX);
+end
