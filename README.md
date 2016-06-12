@@ -1,6 +1,6 @@
 # mir-final
 
-## Folder structure
+## Folder Structure
 
 ```bash
 .
