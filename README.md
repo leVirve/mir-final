@@ -45,6 +45,17 @@ https://goo.gl/aR8GJ9
     example:
             300 3600 "chorus B"
 
+- sample annotation file:
+
+    (Note: Only one newline after one annotation)
+    ```
+    0 3000 "verse"\n
+    3000 5000 "chorus"\n
+    5000 7000 "verse"\n
+    ...
+    21000 24000 "chorus"\n
+    ```
+
 ###- All Annotations in RWC Dataset (optional)
 - bridge A
 - bridge A (+1)
