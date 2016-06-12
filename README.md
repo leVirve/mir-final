@@ -3,6 +3,9 @@
 ## Original Gist Link
 https://goo.gl/gmHsVw
 
+## Googl Drive Link (annotations, tracks, papers)
+https://goo.gl/sD3WBt
+
 ## Folder Structure
 
 ```bash
@@ -25,6 +28,54 @@ https://goo.gl/gmHsVw
 
 ## Reference Papers Link
 https://goo.gl/aR8GJ9
+
+## Annotation Policy for Dataset
+###- Tagging Policy
+- intro
+- verse (A~D)
+- bridge (A~D)
+- pre-chorus
+- chorus (A~D)
+- post-chorus
+- ending
+- nothing
+
+###- Format Policy
+	Type 1:
+		<start_time> <end_time> <tag_type>
+		example:
+				300 3600 chorusB
+	Type 2:
+		<start_time>:<end_time> <tag_type>
+		example:
+				300:3600 chorusB
+
+###- All Annotations in RWC Dataset (optional)
+- bridge A
+- bridge A (+1)
+- bridge A (+2)
+- bridge B
+- bridge B (+2)
+- bridge C
+- bridge D
+- chorus A
+- chorus A (+1)
+- chorus A (+2)
+- chorus A (-10)
+- chorus A (-7)
+- chorus B
+- chorus B (+1)
+- chorus B (+2)
+- chorus C
+- chorus D
+- ending
+- intro
+- nothing
+- post-chorus
+- pre-chorus
+- verse A
+- verse B
+- verse C
 
 ## Corresponding Track Name for Annotations
 ###- Salas
