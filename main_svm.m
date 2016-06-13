@@ -7,12 +7,12 @@ clc; clear all; close all;
 %% initial
 % -- RWC - GT and SONGS --
 
-path_audio_rwc  = '.\rwc48mp3';
-path_audio_ours = '.\ours';
-path_annotation = '.\annotations';
+path_audio_rwc  = './rwc48mp3';
+path_audio_ours = './ours';
+path_annotation = './annotations';
 
 listOfAnnotations = [
-    listfile(fullfile(path_annotation, 'AIST.RWC-MDB-P-2001.CHORUS'), '\RM-*.CHORUS.txt', 1:48)';
+    listfile(fullfile(path_annotation, 'AIST.RWC-MDB-P-2001.CHORUS'), '/RM-*.CHORUS.txt', 1:48)';
     listfile(fullfile(path_annotation, 'Sa'))';
     listfile(fullfile(path_annotation, 'Yi'))';
     listfile(fullfile(path_annotation, 'Wu'))';
