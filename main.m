@@ -34,6 +34,7 @@ clear path_audio_rwc path_audio_ours;
 %% segmentatoin by groundtruth
 songs_seg = get_gt_sgmts(listOfAnnotations);
 
+
 %%
 w = 1024;
 h = 512;
