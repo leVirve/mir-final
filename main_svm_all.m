@@ -26,6 +26,9 @@ listOfSongs = [
     listfile(fullfile(path_audio_ours, 'Wu'))';
 ];
 
+Timbre = {'mfcc', 'brightness', 'zerocorss', 'rolloff', 'centroid', 'spread', 'skewness',...
+            'kurtosis', 'flatness', 'entropy', 'attackslope', 'attacktime', 'attackleap'};
+
 clear path_audio_rwc path_audio_ours;
 %% Segmentatoin Algo
 
@@ -38,6 +41,11 @@ songs_seg = get_gt_sgmts(listOfAnnotations);
 
     % -- Select training and testing set randomly.
 
+for i = 1 : length(Timbre)
+   filename = sprintf('songs_seg_%s.mat', Timbre{i});
+   merge_struct_field(songs_seg, load(filename));
+end
+
 pool_num = 85;
 train_num = 51;
 test_num = 34;
@@ -47,14 +55,17 @@ for i = 1 : pool_num
     listOfSong_pool{i} = listOfSongs{song_pool_index(i)};
 end
 
+
+
 %%
 w = 1024;
 h = 512;
 
 Xtrain = [];
 Ytrain = [];
-for i=1:train_num
+for i = 1 : train_num
     sgmts = audio_sgmt(listOfSong_pool{i}, songs_seg{i});
+    
     Xtemp = [];
     nXtemp = length(sgmts);
     for j = 1 : length(sgmts)
