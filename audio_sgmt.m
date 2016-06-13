@@ -1,6 +1,6 @@
 function [sgmts] = audio_sgmt(audio_path, sgmts_info)
 
-    [audio,fs] = audioread(audio_path);
+    [audio, fs] = audioread(audio_path);
     sgmts = cell(size(sgmts_info));
     for i = 1 : length(sgmts_info)
         interval = floor(sgmts_info{i}.range * fs);
