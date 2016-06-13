@@ -14,7 +14,7 @@ function [feature, raw] = extract_timbre_feature(audio, fs, w, h, mode)
 
     % while S is an object, x is the values inside
     % x = mirgetdata(S); % size: 513 x number of frames
-    if strcmp(mode,'mfcc') == 1
+    if strcmp(mode, 'mfcc') == 1
         S = mirspectrum(f);
         result = mirmfcc(S, 'Rank', 1:20);
     end
