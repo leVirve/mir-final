@@ -8,7 +8,7 @@ clc; clear all; close all;
 % -- RWC - GT and SONGS --
 
 path_audio_rwc  = './rwc48mp3';
-path_audio_ours = './ours';
+path_audio_ours = './Label Dataset(song)';
 path_annotation = './annotations';
 
 listOfAnnotations = [
