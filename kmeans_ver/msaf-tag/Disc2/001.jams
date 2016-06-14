@@ -1,0 +1,107 @@
+{
+  "annotations": [
+    {
+      "sandbox": {
+        "boundaries_id": "scluster",
+        "timestamp": "2016/06/13 17:17:29",
+        "hier": false,
+        "annot_beats": false,
+        "framesync": false,
+        "num_layers": 10,
+        "labels_id": null,
+        "feature": "hpcp",
+        "start_layer": 1,
+        "median": false,
+        "verbose": false,
+        "num_types": null
+      },
+      "annotation_metadata": {
+        "annotator": {},
+        "data_source": "MSAF",
+        "annotation_rules": "",
+        "version": "0.0.3",
+        "validation": "",
+        "annotation_tools": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "corpus": ""
+      },
+      "duration": null,
+      "data": [
+        {
+          "confidence": null,
+          "value": "C",
+          "time": 0.0,
+          "duration": 39.752562000000005
+        },
+        {
+          "confidence": null,
+          "value": "A",
+          "time": 39.752562000000005,
+          "duration": 19.783401
+        },
+        {
+          "confidence": null,
+          "value": "B",
+          "time": 59.53596400000001,
+          "duration": 21.037279
+        },
+        {
+          "confidence": null,
+          "value": "C",
+          "time": 80.573243,
+          "duration": 29.675102000000003
+        },
+        {
+          "confidence": null,
+          "value": "A",
+          "time": 110.248345,
+          "duration": 18.575964000000003
+        },
+        {
+          "confidence": null,
+          "value": "B",
+          "time": 128.824308,
+          "duration": 21.640998
+        },
+        {
+          "confidence": null,
+          "value": "D",
+          "time": 150.465306,
+          "duration": 24.102313000000002
+        },
+        {
+          "confidence": null,
+          "value": "A",
+          "time": 174.567619,
+          "duration": 10.541859
+        },
+        {
+          "confidence": null,
+          "value": "B",
+          "time": 185.10947800000002,
+          "duration": 43.281995
+        },
+        {
+          "confidence": null,
+          "value": "E",
+          "time": 228.39147400000002,
+          "duration": 13.048526
+        }
+      ],
+      "namespace": "segment_open",
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 241.44,
+    "jams_version": "0.2.1",
+    "identifiers": {}
+  }
+}

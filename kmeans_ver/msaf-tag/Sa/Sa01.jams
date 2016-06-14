@@ -1,0 +1,137 @@
+{
+  "file_metadata": {
+    "release": "",
+    "identifiers": {},
+    "title": "",
+    "artist": "",
+    "duration": 202.18775510204082,
+    "jams_version": "0.2.1"
+  },
+  "annotations": [
+    {
+      "data": [
+        {
+          "confidence": null,
+          "time": 0.0,
+          "value": "B",
+          "duration": 3.018594
+        },
+        {
+          "confidence": null,
+          "time": 3.018594,
+          "value": "H",
+          "duration": 12.260135999000001
+        },
+        {
+          "confidence": null,
+          "time": 15.278730000000001,
+          "value": "D",
+          "duration": 10.913379
+        },
+        {
+          "confidence": null,
+          "time": 26.192109000000002,
+          "value": "F",
+          "duration": 13.606893000000001
+        },
+        {
+          "confidence": null,
+          "time": 39.799002,
+          "value": "E",
+          "duration": 14.349932
+        },
+        {
+          "confidence": null,
+          "time": 54.148934000000004,
+          "value": "B",
+          "duration": 6.130067999
+        },
+        {
+          "confidence": null,
+          "time": 60.279002000000006,
+          "value": "B",
+          "duration": 23.173515000000002
+        },
+        {
+          "confidence": null,
+          "time": 83.452517,
+          "value": "F",
+          "duration": 10.21678
+        },
+        {
+          "confidence": null,
+          "time": 93.669297,
+          "value": "B",
+          "duration": 0.6965990000000001
+        },
+        {
+          "confidence": null,
+          "time": 94.365896,
+          "value": "B",
+          "duration": 30.000181
+        },
+        {
+          "confidence": null,
+          "time": 124.366077,
+          "value": "A",
+          "duration": 13.606893000000001
+        },
+        {
+          "confidence": null,
+          "time": 137.972971,
+          "value": "G",
+          "duration": 5.479909
+        },
+        {
+          "confidence": null,
+          "time": 143.45288000000002,
+          "value": "B",
+          "duration": 39.520363
+        },
+        {
+          "confidence": null,
+          "time": 182.97324300000002,
+          "value": "C",
+          "duration": 8.219864000000001
+        },
+        {
+          "confidence": null,
+          "time": 191.193107,
+          "value": "I",
+          "duration": 10.994649
+        }
+      ],
+      "namespace": "segment_open",
+      "duration": null,
+      "sandbox": {
+        "boundaries_id": "scluster",
+        "num_types": null,
+        "start_layer": 1,
+        "hier": false,
+        "labels_id": null,
+        "num_layers": 10,
+        "median": false,
+        "timestamp": "2016/06/13 17:34:37",
+        "framesync": false,
+        "verbose": false,
+        "annot_beats": false,
+        "feature": "hpcp"
+      },
+      "annotation_metadata": {
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": "",
+        "data_source": "MSAF",
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "validation": "",
+        "annotation_rules": "",
+        "annotator": {}
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {}
+}

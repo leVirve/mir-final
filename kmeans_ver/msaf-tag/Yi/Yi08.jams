@@ -1,0 +1,161 @@
+{
+  "file_metadata": {
+    "identifiers": {},
+    "jams_version": "0.2.1",
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 274.3118367346939
+  },
+  "sandbox": {},
+  "annotations": [
+    {
+      "sandbox": {
+        "boundaries_id": "scluster",
+        "verbose": false,
+        "framesync": false,
+        "labels_id": null,
+        "hier": false,
+        "timestamp": "2016/06/13 18:48:28",
+        "feature": "hpcp",
+        "annot_beats": false,
+        "start_layer": 1,
+        "num_layers": 10,
+        "median": false,
+        "num_types": null
+      },
+      "namespace": "segment_open",
+      "data": [
+        {
+          "value": "F",
+          "confidence": null,
+          "time": 0.0,
+          "duration": 19.644082
+        },
+        {
+          "value": "C",
+          "confidence": null,
+          "time": 19.644082,
+          "duration": 13.839093
+        },
+        {
+          "value": "D",
+          "confidence": null,
+          "time": 33.483175,
+          "duration": 19.179683
+        },
+        {
+          "value": "G",
+          "confidence": null,
+          "time": 52.662857,
+          "duration": 29.303583000000003
+        },
+        {
+          "value": "H",
+          "confidence": null,
+          "time": 81.96644,
+          "duration": 17.507846
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 99.474286,
+          "duration": 4.040272
+        },
+        {
+          "value": "H",
+          "confidence": null,
+          "time": 103.514557999,
+          "duration": 14.582132000000001
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 118.09668900000001,
+          "duration": 2.3219950000000003
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 120.41868500000001,
+          "duration": 24.473832
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 144.892517,
+          "duration": 4.690431
+        },
+        {
+          "value": "H",
+          "confidence": null,
+          "time": 149.58294800000002,
+          "duration": 16.300408
+        },
+        {
+          "value": "I",
+          "confidence": null,
+          "time": 165.88335600000002,
+          "duration": 19.040363000000003
+        },
+        {
+          "value": "E",
+          "confidence": null,
+          "time": 184.923719,
+          "duration": 1.3003170000000002
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 186.224036,
+          "duration": 33.250975000000004
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 219.47501100000002,
+          "duration": 6.408707000000001
+        },
+        {
+          "value": "H",
+          "confidence": null,
+          "time": 225.883719,
+          "duration": 15.139410000000002
+        },
+        {
+          "value": "B",
+          "confidence": null,
+          "time": 241.023129,
+          "duration": 4.086712
+        },
+        {
+          "value": "A",
+          "confidence": null,
+          "time": 245.10984100000002,
+          "duration": 24.798912
+        },
+        {
+          "value": "J",
+          "confidence": null,
+          "time": 269.908753,
+          "duration": 4.403084000000001
+        }
+      ],
+      "annotation_metadata": {
+        "validation": "",
+        "annotation_rules": "",
+        "version": "0.0.3",
+        "annotator": {},
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotation_tools": "",
+        "corpus": "",
+        "data_source": "MSAF"
+      },
+      "time": 0,
+      "duration": null
+    }
+  ]
+}
