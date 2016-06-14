@@ -1,9 +1,10 @@
 clc; close all; clear all;
 
-cd 'D:\mir_final_V2';
-path_audio_rwc  = './rwc48mp3';
-path_audio_ours = './Label Dataset(song)';
-path_json = './msaf-tag';
+addpath('../toolbox');
+
+path_audio_rwc  = '../rwc48mp3';
+path_audio_ours = '../Label Dataset(song)';
+path_json = '../annotations';
 
 listOfSongs = [
     listfile(fullfile(path_audio_rwc, 'Disc1'))';
