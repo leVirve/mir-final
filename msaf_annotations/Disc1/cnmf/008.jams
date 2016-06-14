@@ -1,0 +1,179 @@
+{
+  "annotations": [
+    {
+      "namespace": "segment_open",
+      "data": [
+        {
+          "duration": 24.195193000000003,
+          "value": "B",
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "C",
+          "time": 24.195193000000003,
+          "confidence": null
+        },
+        {
+          "duration": 8.962902,
+          "value": "D",
+          "time": 32.693696,
+          "confidence": null
+        },
+        {
+          "duration": 6.640907,
+          "value": "B",
+          "time": 41.656599,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "E",
+          "time": 48.297506000000006,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "B",
+          "time": 56.796009000000005,
+          "confidence": null
+        },
+        {
+          "duration": 1.439637,
+          "value": "C",
+          "time": 65.294512,
+          "confidence": null
+        },
+        {
+          "duration": 6.130067999,
+          "value": "D",
+          "time": 66.73415,
+          "confidence": null
+        },
+        {
+          "duration": 15.603810000000001,
+          "value": "B",
+          "time": 72.86421800000001,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "C",
+          "time": 88.468027,
+          "confidence": null
+        },
+        {
+          "duration": 9.427302000000001,
+          "value": "D",
+          "time": 96.966531,
+          "confidence": null
+        },
+        {
+          "duration": 6.130067999,
+          "value": "B",
+          "time": 106.393832,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "E",
+          "time": 112.52390000000001,
+          "confidence": null
+        },
+        {
+          "duration": 7.569705000000001,
+          "value": "B",
+          "time": 121.02240400000001,
+          "confidence": null
+        },
+        {
+          "duration": 2.832834,
+          "value": "C",
+          "time": 128.59210900000002,
+          "confidence": null
+        },
+        {
+          "duration": 19.365442,
+          "value": "D",
+          "time": 131.424943,
+          "confidence": null
+        },
+        {
+          "duration": 7.569705000000001,
+          "value": "B",
+          "time": 150.79038500000001,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "E",
+          "time": 158.360091,
+          "confidence": null
+        },
+        {
+          "duration": 6.640907,
+          "value": "B",
+          "time": 166.858594,
+          "confidence": null
+        },
+        {
+          "duration": 4.226032,
+          "value": "D",
+          "time": 173.499501,
+          "confidence": null
+        },
+        {
+          "duration": 2.3684350000000003,
+          "value": "D",
+          "time": 177.725533,
+          "confidence": null
+        },
+        {
+          "duration": 12.092698,
+          "value": "F",
+          "time": 180.09396800000002,
+          "confidence": null
+        }
+      ],
+      "annotation_metadata": {
+        "validation": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotator": {},
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotation_rules": "",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "duration": null,
+      "sandbox": {
+        "rank": 3,
+        "feature": "hpcp",
+        "timestamp": "2016/06/13 21:09:43",
+        "R": 16,
+        "boundaries_id": "cnmf",
+        "R_labels": 16,
+        "labels_id": null,
+        "framesync": false,
+        "annot_beats": false,
+        "hier": false,
+        "rank_labels": 4,
+        "h": 20
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "artist": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "duration": 192.18666666666667,
+    "title": "",
+    "identifiers": {}
+  }
+}

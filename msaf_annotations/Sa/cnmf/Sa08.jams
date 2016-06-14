@@ -1,0 +1,89 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_tools": "",
+        "annotator": {},
+        "data_source": "MSAF",
+        "corpus": "",
+        "version": "0.0.3",
+        "validation": "",
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "h": 20,
+        "framesync": false,
+        "hier": false,
+        "labels_id": null,
+        "R_labels": 16,
+        "rank_labels": 4,
+        "timestamp": "2016/06/13 22:44:29",
+        "boundaries_id": "cnmf",
+        "feature": "hpcp",
+        "R": 16,
+        "annot_beats": false,
+        "rank": 3
+      },
+      "namespace": "segment_open",
+      "data": [
+        {
+          "confidence": null,
+          "time": 0.0,
+          "value": "D",
+          "duration": 24.102313000000002
+        },
+        {
+          "confidence": null,
+          "time": 24.102313000000002,
+          "value": "B",
+          "duration": 41.285079
+        },
+        {
+          "confidence": null,
+          "time": 65.387392,
+          "value": "D",
+          "duration": 33.065214999000005
+        },
+        {
+          "confidence": null,
+          "time": 98.45260800000001,
+          "value": "B",
+          "duration": 46.997188
+        },
+        {
+          "confidence": null,
+          "time": 145.44979600000002,
+          "value": "C",
+          "duration": 49.458503
+        },
+        {
+          "confidence": null,
+          "time": 194.908299,
+          "value": "E",
+          "duration": 49.504943000000004
+        },
+        {
+          "confidence": null,
+          "time": 244.41324300000002,
+          "value": "F",
+          "duration": 12.318186
+        }
+      ],
+      "time": 0,
+      "duration": null
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "identifiers": {},
+    "duration": 256.7314285714286,
+    "artist": ""
+  },
+  "sandbox": {}
+}

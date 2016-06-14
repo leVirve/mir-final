@@ -1,0 +1,95 @@
+{
+  "annotations": [
+    {
+      "namespace": "segment_open",
+      "data": [
+        {
+          "duration": 9.705941000000001,
+          "value": "D",
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "duration": 1.764717,
+          "value": "D",
+          "time": 9.705941000000001,
+          "confidence": null
+        },
+        {
+          "duration": 9.613061,
+          "value": "E",
+          "time": 11.470658,
+          "confidence": null
+        },
+        {
+          "duration": 92.41542000000001,
+          "value": "C",
+          "time": 21.083719000000002,
+          "confidence": null
+        },
+        {
+          "duration": 9.566621000000001,
+          "value": "D",
+          "time": 113.499138,
+          "confidence": null
+        },
+        {
+          "duration": 70.820862,
+          "value": "C",
+          "time": 123.06576000000001,
+          "confidence": null
+        },
+        {
+          "duration": 22.198277,
+          "value": "E",
+          "time": 193.88662100000002,
+          "confidence": null
+        },
+        {
+          "duration": 6.6217690000000005,
+          "value": "F",
+          "time": 216.084898,
+          "confidence": null
+        }
+      ],
+      "annotation_metadata": {
+        "validation": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotator": {},
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotation_rules": "",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "duration": null,
+      "sandbox": {
+        "rank": 3,
+        "feature": "hpcp",
+        "timestamp": "2016/06/13 21:05:07",
+        "R": 16,
+        "boundaries_id": "cnmf",
+        "R_labels": 16,
+        "labels_id": null,
+        "framesync": false,
+        "annot_beats": false,
+        "hier": false,
+        "rank_labels": 4,
+        "h": 20
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "artist": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "duration": 222.70666666666668,
+    "title": "",
+    "identifiers": {}
+  }
+}

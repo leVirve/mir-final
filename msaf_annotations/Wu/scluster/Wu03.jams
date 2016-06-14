@@ -1,0 +1,95 @@
+{
+  "file_metadata": {
+    "jams_version": "0.2.1",
+    "artist": "",
+    "duration": 218.48816326530613,
+    "release": "",
+    "identifiers": {},
+    "title": ""
+  },
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "annotation_tools": "",
+        "corpus": "",
+        "validation": "",
+        "annotator": {},
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "version": "0.0.3",
+        "data_source": "MSAF",
+        "annotation_rules": ""
+      },
+      "namespace": "segment_open",
+      "sandbox": {
+        "labels_id": null,
+        "framesync": false,
+        "feature": "hpcp",
+        "num_layers": 10,
+        "num_types": null,
+        "median": false,
+        "hier": false,
+        "start_layer": 1,
+        "timestamp": "2016/06/13 17:56:12",
+        "annot_beats": false,
+        "boundaries_id": "scluster",
+        "verbose": false
+      },
+      "duration": null,
+      "time": 0,
+      "data": [
+        {
+          "duration": 22.244717,
+          "time": 0.0,
+          "value": "A",
+          "confidence": null
+        },
+        {
+          "duration": 17.786485000000003,
+          "time": 22.244717,
+          "value": "B",
+          "confidence": null
+        },
+        {
+          "duration": 23.219955000000002,
+          "time": 40.031202,
+          "value": "E",
+          "confidence": null
+        },
+        {
+          "duration": 24.566712000000003,
+          "time": 63.251156,
+          "value": "F",
+          "confidence": null
+        },
+        {
+          "duration": 16.393288000000002,
+          "time": 87.817868,
+          "value": "B",
+          "confidence": null
+        },
+        {
+          "duration": 66.22331100000001,
+          "time": 104.211156,
+          "value": "D",
+          "confidence": null
+        },
+        {
+          "duration": 41.656599,
+          "time": 170.434467,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "duration": 6.397098000000001,
+          "time": 212.091066,
+          "value": "G",
+          "confidence": null
+        }
+      ]
+    }
+  ],
+  "sandbox": {}
+}

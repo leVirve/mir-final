@@ -1,0 +1,89 @@
+{
+  "annotations": [
+    {
+      "namespace": "segment_open",
+      "data": [
+        {
+          "duration": 21.362358,
+          "value": "E",
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "duration": 21.176599000000003,
+          "value": "D",
+          "time": 21.362358,
+          "confidence": null
+        },
+        {
+          "duration": 79.36580500000001,
+          "value": "B",
+          "time": 42.538957,
+          "confidence": null
+        },
+        {
+          "duration": 21.269478000000003,
+          "value": "C",
+          "time": 121.904762,
+          "confidence": null
+        },
+        {
+          "duration": 48.390385,
+          "value": "B",
+          "time": 143.17424,
+          "confidence": null
+        },
+        {
+          "duration": 12.585215000000002,
+          "value": "C",
+          "time": 191.564626,
+          "confidence": null
+        },
+        {
+          "duration": 11.543492,
+          "value": "F",
+          "time": 204.149841,
+          "confidence": null
+        }
+      ],
+      "annotation_metadata": {
+        "validation": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotator": {},
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotation_rules": "",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "duration": null,
+      "sandbox": {
+        "rank": 3,
+        "feature": "hpcp",
+        "timestamp": "2016/06/13 21:11:25",
+        "R": 16,
+        "boundaries_id": "cnmf",
+        "R_labels": 16,
+        "labels_id": null,
+        "framesync": false,
+        "annot_beats": false,
+        "hier": false,
+        "rank_labels": 4,
+        "h": 20
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "artist": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "duration": 215.69333333333333,
+    "title": "",
+    "identifiers": {}
+  }
+}

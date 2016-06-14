@@ -1,0 +1,89 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "release": "",
+    "identifiers": {},
+    "title": "",
+    "jams_version": "0.2.1",
+    "artist": "",
+    "duration": 170.13333333333333
+  },
+  "annotations": [
+    {
+      "sandbox": {
+        "R_labels": 16,
+        "framesync": false,
+        "feature": "hpcp",
+        "R": 16,
+        "labels_id": null,
+        "h": 20,
+        "timestamp": "2016/06/13 22:31:25",
+        "boundaries_id": "cnmf",
+        "rank_labels": 4,
+        "annot_beats": false,
+        "hier": false,
+        "rank": 3
+      },
+      "data": [
+        {
+          "value": "C",
+          "duration": 54.427574,
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 24.613152000000003,
+          "time": 54.427574,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 15.603810000000001,
+          "time": 79.040726,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 35.387211,
+          "time": 94.644535,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 23.405714,
+          "time": 130.031746,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 3.622313,
+          "time": 153.43746000000002,
+          "confidence": null
+        },
+        {
+          "value": "F",
+          "duration": 13.07356,
+          "time": 157.059773,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open",
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "time": 0,
+      "duration": null
+    }
+  ]
+}

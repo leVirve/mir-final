@@ -1,0 +1,89 @@
+{
+  "annotations": [
+    {
+      "namespace": "segment_open",
+      "data": [
+        {
+          "duration": 41.006440000000005,
+          "value": "B",
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "duration": 7.291066000000001,
+          "value": "C",
+          "time": 41.006440000000005,
+          "confidence": null
+        },
+        {
+          "duration": 31.346939000000003,
+          "value": "D",
+          "time": 48.297506000000006,
+          "confidence": null
+        },
+        {
+          "duration": 25.031111000000003,
+          "value": "B",
+          "time": 79.64444400000001,
+          "confidence": null
+        },
+        {
+          "duration": 6.780227,
+          "value": "C",
+          "time": 104.675556,
+          "confidence": null
+        },
+        {
+          "duration": 44.117914000000006,
+          "value": "E",
+          "time": 111.45578200000001,
+          "confidence": null
+        },
+        {
+          "duration": 7.319637,
+          "value": "F",
+          "time": 155.573696,
+          "confidence": null
+        }
+      ],
+      "annotation_metadata": {
+        "validation": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotator": {},
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotation_rules": "",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "duration": null,
+      "sandbox": {
+        "rank": 3,
+        "feature": "hpcp",
+        "timestamp": "2016/06/13 21:15:09",
+        "R": 16,
+        "boundaries_id": "cnmf",
+        "R_labels": 16,
+        "labels_id": null,
+        "framesync": false,
+        "annot_beats": false,
+        "hier": false,
+        "rank_labels": 4,
+        "h": 20
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "artist": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "duration": 162.89333333333335,
+    "title": "",
+    "identifiers": {}
+  }
+}

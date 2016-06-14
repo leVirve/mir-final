@@ -1,0 +1,173 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "release": "",
+    "identifiers": {},
+    "title": "",
+    "jams_version": "0.2.1",
+    "artist": "",
+    "duration": 199.01333333333332
+  },
+  "annotations": [
+    {
+      "sandbox": {
+        "R_labels": 16,
+        "framesync": false,
+        "feature": "hpcp",
+        "R": 16,
+        "labels_id": null,
+        "h": 20,
+        "timestamp": "2016/06/13 22:35:11",
+        "boundaries_id": "cnmf",
+        "rank_labels": 4,
+        "annot_beats": false,
+        "hier": false,
+        "rank": 3
+      },
+      "data": [
+        {
+          "value": "D",
+          "duration": 5.990748,
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 8.591383,
+          "time": 5.990748,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 1.764717,
+          "time": 14.582132000000001,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 1.439637,
+          "time": 16.346848,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 16.068209,
+          "time": 17.786485000000003,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 0.6965990000000001,
+          "time": 33.854694,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 0.37151900000000004,
+          "time": 34.551293,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 9.984580000000001,
+          "time": 34.922812,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 27.399546,
+          "time": 44.907392,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 10.495420000000001,
+          "time": 72.306939,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 14.628571,
+          "time": 82.802358,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 0.743039,
+          "time": 97.43093,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 9.613061,
+          "time": 98.173968,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 26.935147,
+          "time": 107.787029,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 7.337506,
+          "time": 134.72217700000002,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 29.303583000000003,
+          "time": 142.059683,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 0.6965990000000001,
+          "time": 171.363265,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 7.151746,
+          "time": 172.059864,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 3.575873,
+          "time": 179.21161,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 7.383946000000001,
+          "time": 182.787483,
+          "confidence": null
+        },
+        {
+          "value": "F",
+          "duration": 8.841905,
+          "time": 190.17142900000002,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open",
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "time": 0,
+      "duration": null
+    }
+  ]
+}

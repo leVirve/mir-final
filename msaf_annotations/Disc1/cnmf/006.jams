@@ -1,0 +1,107 @@
+{
+  "annotations": [
+    {
+      "namespace": "segment_open",
+      "data": [
+        {
+          "duration": 16.114649,
+          "value": "E",
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "duration": 39.473923,
+          "value": "C",
+          "time": 16.114649,
+          "confidence": null
+        },
+        {
+          "duration": 5.01551,
+          "value": "B",
+          "time": 55.588571,
+          "confidence": null
+        },
+        {
+          "duration": 46.997188,
+          "value": "C",
+          "time": 60.604082000000005,
+          "confidence": null
+        },
+        {
+          "duration": 15.000091000000001,
+          "value": "B",
+          "time": 107.60127000000001,
+          "confidence": null
+        },
+        {
+          "duration": 33.018776,
+          "value": "B",
+          "time": 122.60136100000001,
+          "confidence": null
+        },
+        {
+          "duration": 17.972245,
+          "value": "B",
+          "time": 155.620136,
+          "confidence": null
+        },
+        {
+          "duration": 8.498503000000001,
+          "value": "B",
+          "time": 173.59238100000002,
+          "confidence": null
+        },
+        {
+          "duration": 20.108481,
+          "value": "E",
+          "time": 182.09088400000002,
+          "confidence": null
+        },
+        {
+          "duration": 4.3739680000000005,
+          "value": "F",
+          "time": 202.199365,
+          "confidence": null
+        }
+      ],
+      "annotation_metadata": {
+        "validation": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotator": {},
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotation_rules": "",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "duration": null,
+      "sandbox": {
+        "rank": 3,
+        "feature": "hpcp",
+        "timestamp": "2016/06/13 21:08:03",
+        "R": 16,
+        "boundaries_id": "cnmf",
+        "R_labels": 16,
+        "labels_id": null,
+        "framesync": false,
+        "annot_beats": false,
+        "hier": false,
+        "rank_labels": 4,
+        "h": 20
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "artist": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "duration": 206.57333333333332,
+    "title": "",
+    "identifiers": {}
+  }
+}

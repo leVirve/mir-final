@@ -1,0 +1,89 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_tools": "",
+        "annotator": {},
+        "data_source": "MSAF",
+        "corpus": "",
+        "version": "0.0.3",
+        "validation": "",
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "h": 20,
+        "framesync": false,
+        "hier": false,
+        "labels_id": null,
+        "R_labels": 16,
+        "rank_labels": 4,
+        "timestamp": "2016/06/13 22:50:06",
+        "boundaries_id": "cnmf",
+        "feature": "hpcp",
+        "R": 16,
+        "annot_beats": false,
+        "rank": 3
+      },
+      "namespace": "segment_open",
+      "data": [
+        {
+          "confidence": null,
+          "time": 0.0,
+          "value": "B",
+          "duration": 147.214512
+        },
+        {
+          "confidence": null,
+          "time": 147.214512,
+          "value": "E",
+          "duration": 14.442812000000002
+        },
+        {
+          "confidence": null,
+          "time": 161.65732400000002,
+          "value": "B",
+          "duration": 23.962993
+        },
+        {
+          "confidence": null,
+          "time": 185.620317,
+          "value": "C",
+          "duration": 11.192018000000001
+        },
+        {
+          "confidence": null,
+          "time": 196.81233600000002,
+          "value": "E",
+          "duration": 20.805079000000003
+        },
+        {
+          "confidence": null,
+          "time": 217.61741500000002,
+          "value": "C",
+          "duration": 72.07473900000001
+        },
+        {
+          "confidence": null,
+          "time": 289.692154,
+          "value": "F",
+          "duration": 21.474376000000003
+        }
+      ],
+      "time": 0,
+      "duration": null
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "identifiers": {},
+    "duration": 311.1665306122449,
+    "artist": ""
+  },
+  "sandbox": {}
+}

@@ -1,0 +1,173 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "release": "",
+    "identifiers": {},
+    "title": "",
+    "jams_version": "0.2.1",
+    "artist": "",
+    "duration": 246.08
+  },
+  "annotations": [
+    {
+      "sandbox": {
+        "R_labels": 16,
+        "framesync": false,
+        "feature": "hpcp",
+        "R": 16,
+        "labels_id": null,
+        "h": 20,
+        "timestamp": "2016/06/13 22:33:47",
+        "boundaries_id": "cnmf",
+        "rank_labels": 4,
+        "annot_beats": false,
+        "hier": false,
+        "rank": 3
+      },
+      "data": [
+        {
+          "value": "D",
+          "duration": 25.263311,
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 9.195102,
+          "time": 25.263311,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 8.684263000000001,
+          "time": 34.458413,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 4.87619,
+          "time": 43.142676,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 30.000181,
+          "time": 48.018866,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 7.244626,
+          "time": 78.019048,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 6.315828000000001,
+          "time": 85.26367300000001,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 26.563628,
+          "time": 91.57950100000001,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 9.195102,
+          "time": 118.143129,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 8.219864000000001,
+          "time": 127.33823100000001,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 0.510839,
+          "time": 135.558095,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 6.780227,
+          "time": 136.068934,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 28.049705000000003,
+          "time": 142.849161,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 6.780227,
+          "time": 170.898866,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 10.634739000000001,
+          "time": 177.67909300000002,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 5.804989,
+          "time": 188.31383200000002,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 10.913379,
+          "time": 194.11882100000003,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 17.182766,
+          "time": 205.03220000000002,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 8.219864000000001,
+          "time": 222.214966,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 9.891701000000001,
+          "time": 230.43483,
+          "confidence": null
+        },
+        {
+          "value": "F",
+          "duration": 5.753469,
+          "time": 240.32653100000002,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open",
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "time": 0,
+      "duration": null
+    }
+  ]
+}

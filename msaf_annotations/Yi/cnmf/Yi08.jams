@@ -1,0 +1,191 @@
+{
+  "sandbox": {},
+  "annotations": [
+    {
+      "duration": null,
+      "annotation_metadata": {
+        "annotation_tools": "",
+        "data_source": "MSAF",
+        "validation": "",
+        "corpus": "",
+        "annotator": {},
+        "annotation_rules": "",
+        "version": "0.0.3",
+        "curator": {
+          "name": "",
+          "email": ""
+        }
+      },
+      "time": 0,
+      "sandbox": {
+        "feature": "hpcp",
+        "rank_labels": 4,
+        "framesync": false,
+        "R_labels": 16,
+        "R": 16,
+        "rank": 3,
+        "boundaries_id": "cnmf",
+        "h": 20,
+        "annot_beats": false,
+        "timestamp": "2016/06/14 11:20:35",
+        "hier": false,
+        "labels_id": null
+      },
+      "namespace": "segment_open",
+      "data": [
+        {
+          "duration": 8.219864000000001,
+          "time": 0.0,
+          "confidence": null,
+          "value": "C"
+        },
+        {
+          "duration": 5.340590000000001,
+          "time": 8.219864000000001,
+          "confidence": null,
+          "value": "C"
+        },
+        {
+          "duration": 10.309660000000001,
+          "time": 13.560454,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 6.037188,
+          "time": 23.870113,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 14.303492,
+          "time": 29.907302,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 15.650249,
+          "time": 44.210794,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 5.387029,
+          "time": 59.861043,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 6.594467000000001,
+          "time": 65.248073,
+          "confidence": null,
+          "value": "C"
+        },
+        {
+          "duration": 14.210612000000001,
+          "time": 71.84254,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 7.569705000000001,
+          "time": 86.05315200000001,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 7.569705000000001,
+          "time": 93.62285700000001,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 7.0124260000000005,
+          "time": 101.19256200000001,
+          "confidence": null,
+          "value": "C"
+        },
+        {
+          "duration": 5.804989,
+          "time": 108.20498900000001,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 9.334422,
+          "time": 114.009977,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 11.656417000000001,
+          "time": 123.34439900000001,
+          "confidence": null,
+          "value": "C"
+        },
+        {
+          "duration": 30.278821,
+          "time": 135.00081600000001,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 9.520181000000001,
+          "time": 165.279637,
+          "confidence": null,
+          "value": "B"
+        },
+        {
+          "duration": 14.396372000000001,
+          "time": 174.799819,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 13.978413000000002,
+          "time": 189.19619,
+          "confidence": null,
+          "value": "C"
+        },
+        {
+          "duration": 4.643991000000001,
+          "time": 203.17460300000002,
+          "confidence": null,
+          "value": "D"
+        },
+        {
+          "duration": 10.495420000000001,
+          "time": 207.81859400000002,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 41.377959000000004,
+          "time": 218.31401400000001,
+          "confidence": null,
+          "value": "E"
+        },
+        {
+          "duration": 10.21678,
+          "time": 259.691973,
+          "confidence": null,
+          "value": "B"
+        },
+        {
+          "duration": 4.403084000000001,
+          "time": 269.908753,
+          "confidence": null,
+          "value": "F"
+        }
+      ]
+    }
+  ],
+  "file_metadata": {
+    "identifiers": {},
+    "duration": 274.3118367346939,
+    "jams_version": "0.2.1",
+    "title": "",
+    "artist": "",
+    "release": ""
+  }
+}

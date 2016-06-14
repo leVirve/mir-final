@@ -15,7 +15,25 @@ https://goo.gl/sD3WBt
 │   ├── Sa/
 │   ├── Wu/
 │   └── Yi/
-│
+├── msaf_annotations/
+│   ├── Disc1/
+│   │   ├── cnmf/
+│   │   └── scluster/
+│   ├── Disc2/
+│   │   ├── cnmf/
+│   │   └── scluster/
+│   ├── Disc3/
+│   │   ├── cnmf/
+│   │   └── scluster/
+│   ├── Sa/
+│   │   ├── cnmf/
+│   │   └── scluster/
+│   ├── Wu/
+│   │   ├── cnmf/
+│   │   └── scluster/
+│   └── Yi/
+│       ├── cnmf/
+│       └── scluster/
 ├── rwc48mp3/
 │   ├── Disc1/
 │   ├── Disc2/
@@ -29,9 +47,11 @@ https://goo.gl/sD3WBt
 ├── toolbox/
 │   ├── AuditoryToolbox/
 │   ├── ChromaToolbox/
-│   └── MIRToolbox/
+│   ├── MIRToolbox/
+│   └── libsvm-3.21/
 │
-└── (all our matlab code) *.m
+├── (all our matlab code) *.m
+└── (all our matlab storage files) *.mat
 ```
 
 ## Reference Papers Link

@@ -1,0 +1,113 @@
+{
+  "file_metadata": {
+    "jams_version": "0.2.1",
+    "release": "",
+    "duration": 241.44,
+    "identifiers": {},
+    "title": "",
+    "artist": ""
+  },
+  "sandbox": {},
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "data_source": "MSAF",
+        "validation": "",
+        "annotation_rules": "",
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "time": 0,
+      "data": [
+        {
+          "time": 0.0,
+          "duration": 40.356281,
+          "value": "D",
+          "confidence": null
+        },
+        {
+          "time": 40.356281,
+          "duration": 5.572789,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 45.92907,
+          "duration": 8.034104000000001,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 53.96317500000001,
+          "duration": 30.928980000000003,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 84.892154,
+          "duration": 23.498594,
+          "value": "D",
+          "confidence": null
+        },
+        {
+          "time": 108.390748,
+          "duration": 6.8266670000000005,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 115.217415,
+          "duration": 8.034104000000001,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 123.251519,
+          "duration": 29.071383,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 152.322902,
+          "duration": 27.817506,
+          "value": "E",
+          "confidence": null
+        },
+        {
+          "time": 180.140408,
+          "duration": 48.251066,
+          "value": "C",
+          "confidence": null
+        },
+        {
+          "time": 228.39147400000002,
+          "duration": 13.048526,
+          "value": "F",
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open",
+      "duration": null,
+      "sandbox": {
+        "rank": 3,
+        "boundaries_id": "cnmf",
+        "feature": "hpcp",
+        "timestamp": "2016/06/13 21:48:38",
+        "R_labels": 16,
+        "annot_beats": false,
+        "rank_labels": 4,
+        "hier": false,
+        "h": 20,
+        "labels_id": null,
+        "framesync": false,
+        "R": 16
+      }
+    }
+  ]
+}

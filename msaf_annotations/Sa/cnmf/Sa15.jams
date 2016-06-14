@@ -1,0 +1,83 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_tools": "",
+        "annotator": {},
+        "data_source": "MSAF",
+        "corpus": "",
+        "version": "0.0.3",
+        "validation": "",
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "h": 20,
+        "framesync": false,
+        "hier": false,
+        "labels_id": null,
+        "R_labels": 16,
+        "rank_labels": 4,
+        "timestamp": "2016/06/13 22:50:52",
+        "boundaries_id": "cnmf",
+        "feature": "hpcp",
+        "R": 16,
+        "annot_beats": false,
+        "rank": 3
+      },
+      "namespace": "segment_open",
+      "data": [
+        {
+          "confidence": null,
+          "time": 0.0,
+          "value": "D",
+          "duration": 11.052698000000001
+        },
+        {
+          "confidence": null,
+          "time": 11.052698000000001,
+          "value": "B",
+          "duration": 46.114830000000005
+        },
+        {
+          "confidence": null,
+          "time": 57.167528000000004,
+          "value": "D",
+          "duration": 19.504762
+        },
+        {
+          "confidence": null,
+          "time": 76.67229,
+          "value": "C",
+          "duration": 90.23274400000001
+        },
+        {
+          "confidence": null,
+          "time": 166.905034,
+          "value": "E",
+          "duration": 33.529614999
+        },
+        {
+          "confidence": null,
+          "time": 200.434649,
+          "value": "F",
+          "duration": 15.792018
+        }
+      ],
+      "time": 0,
+      "duration": null
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "release": "",
+    "jams_version": "0.2.1",
+    "identifiers": {},
+    "duration": 216.22666666666666,
+    "artist": ""
+  },
+  "sandbox": {}
+}

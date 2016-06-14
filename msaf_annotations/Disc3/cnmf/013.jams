@@ -1,0 +1,101 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "release": "",
+    "identifiers": {},
+    "title": "",
+    "jams_version": "0.2.1",
+    "artist": "",
+    "duration": 222.53333333333333
+  },
+  "annotations": [
+    {
+      "sandbox": {
+        "R_labels": 16,
+        "framesync": false,
+        "feature": "hpcp",
+        "R": 16,
+        "labels_id": null,
+        "h": 20,
+        "timestamp": "2016/06/13 22:34:30",
+        "boundaries_id": "cnmf",
+        "rank_labels": 4,
+        "annot_beats": false,
+        "hier": false,
+        "rank": 3
+      },
+      "data": [
+        {
+          "value": "B",
+          "duration": 14.117732,
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 59.21088400000001,
+          "time": 14.117732,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 10.1239,
+          "time": 73.32861700000001,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 67.012789,
+          "time": 83.452517,
+          "confidence": null
+        },
+        {
+          "value": "B",
+          "duration": 21.037279,
+          "time": 150.465306,
+          "confidence": null
+        },
+        {
+          "value": "D",
+          "duration": 27.306667,
+          "time": 171.50258499900002,
+          "confidence": null
+        },
+        {
+          "value": "C",
+          "duration": 7.755465,
+          "time": 198.80925200000001,
+          "confidence": null
+        },
+        {
+          "value": "E",
+          "duration": 4.690431,
+          "time": 206.564717,
+          "confidence": null
+        },
+        {
+          "value": "F",
+          "duration": 11.278186,
+          "time": 211.25514700000002,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open",
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": ""
+      },
+      "time": 0,
+      "duration": null
+    }
+  ]
+}

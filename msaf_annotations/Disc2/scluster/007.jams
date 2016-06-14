@@ -1,0 +1,89 @@
+{
+  "annotations": [
+    {
+      "sandbox": {
+        "boundaries_id": "scluster",
+        "timestamp": "2016/06/13 17:18:07",
+        "hier": false,
+        "annot_beats": false,
+        "framesync": false,
+        "num_layers": 10,
+        "labels_id": null,
+        "feature": "hpcp",
+        "start_layer": 1,
+        "median": false,
+        "verbose": false,
+        "num_types": null
+      },
+      "annotation_metadata": {
+        "annotator": {},
+        "data_source": "MSAF",
+        "annotation_rules": "",
+        "version": "0.0.3",
+        "validation": "",
+        "annotation_tools": "",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "corpus": ""
+      },
+      "duration": null,
+      "data": [
+        {
+          "confidence": null,
+          "value": "C",
+          "time": 0.0,
+          "duration": 35.015692
+        },
+        {
+          "confidence": null,
+          "value": "B",
+          "time": 35.015692,
+          "duration": 25.913469000000003
+        },
+        {
+          "confidence": null,
+          "value": "A",
+          "time": 60.929161,
+          "duration": 32.275737
+        },
+        {
+          "confidence": null,
+          "value": "C",
+          "time": 93.204898,
+          "duration": 29.071383
+        },
+        {
+          "confidence": null,
+          "value": "B",
+          "time": 122.27628100000001,
+          "duration": 33.204535
+        },
+        {
+          "confidence": null,
+          "value": "A",
+          "time": 155.480816,
+          "duration": 38.638005
+        },
+        {
+          "confidence": null,
+          "value": "D",
+          "time": 194.11882100000003,
+          "duration": 7.067846
+        }
+      ],
+      "namespace": "segment_open",
+      "time": 0
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 201.18666666666667,
+    "jams_version": "0.2.1",
+    "identifiers": {}
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "file_metadata": {
+    "release": "",
+    "identifiers": {},
+    "title": "",
+    "artist": "",
+    "duration": 256.7314285714286,
+    "jams_version": "0.2.1"
+  },
+  "annotations": [
+    {
+      "data": [
+        {
+          "confidence": null,
+          "time": 0.0,
+          "value": "A",
+          "duration": 26.424308
+        },
+        {
+          "confidence": null,
+          "time": 26.424308,
+          "value": "F",
+          "duration": 24.706032
+        },
+        {
+          "confidence": null,
+          "time": 51.130340000000004,
+          "value": "C",
+          "duration": 24.009433
+        },
+        {
+          "confidence": null,
+          "time": 75.139773,
+          "value": "E",
+          "duration": 27.771066
+        },
+        {
+          "confidence": null,
+          "time": 102.91083900000001,
+          "value": "C",
+          "duration": 46.950748000000004
+        },
+        {
+          "confidence": null,
+          "time": 149.86158700000001,
+          "value": "E",
+          "duration": 44.303673
+        },
+        {
+          "confidence": null,
+          "time": 194.16526100000002,
+          "value": "B",
+          "duration": 29.582222
+        },
+        {
+          "confidence": null,
+          "time": 223.74748300000002,
+          "value": "D",
+          "duration": 20.665760000000002
+        },
+        {
+          "confidence": null,
+          "time": 244.41324300000002,
+          "value": "G",
+          "duration": 12.318186
+        }
+      ],
+      "namespace": "segment_open",
+      "duration": null,
+      "sandbox": {
+        "boundaries_id": "scluster",
+        "num_types": null,
+        "start_layer": 1,
+        "hier": false,
+        "labels_id": null,
+        "num_layers": 10,
+        "median": false,
+        "timestamp": "2016/06/13 17:40:32",
+        "framesync": false,
+        "verbose": false,
+        "annot_beats": false,
+        "feature": "hpcp"
+      },
+      "annotation_metadata": {
+        "version": "0.0.3",
+        "corpus": "",
+        "annotation_tools": "",
+        "data_source": "MSAF",
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "validation": "",
+        "annotation_rules": "",
+        "annotator": {}
+      },
+      "time": 0
+    }
+  ],
+  "sandbox": {}
+}
