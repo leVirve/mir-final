@@ -26,9 +26,6 @@ listOfSongs = [
     listfile(fullfile(path_audio_ours, 'Wu'))';
 ];
 
-Timbre = {'mfcc', 'brightness', 'zerocorss', 'rolloff', 'centroid', 'spread', 'skewness',...
-            'kurtosis', 'flatness', 'entropy', 'attackslope', 'attacktime', 'attackleap'};
-
 clear path_audio_rwc path_audio_ours;
 %% Segmentatoin Algo
 
@@ -41,9 +38,12 @@ songs_seg = get_gt_sgmts(listOfAnnotations);
 
     % -- Select training and testing set randomly.
 
-for i = 1 : length(Timbre)
+Timbre = {'mfcc', 'brightness', 'zerocorss', 'rolloff', 'centroid', 'spread', 'skewness',...
+            'kurtosis', 'flatness', 'entropy', 'attackslope', 'attacktime', 'attackleap'};
+
+for i = 1 : 2 : 3
    filename = sprintf('songs_seg_%s.mat', Timbre{i});
-   merge_struct_field(songs_seg, load(filename));
+   songs_seg = merge_struct_field(songs_seg, load(filename));
 end
 
 pool_num = 85;
@@ -64,18 +64,12 @@ h = 512;
 Xtrain = [];
 Ytrain = [];
 for i = 1 : train_num
-    sgmts = audio_sgmt(listOfSong_pool{i}, songs_seg{i});
-    
+    ri = rp(i);
     Xtemp = [];
-    nXtemp = length(sgmts);
-    for j = 1 : length(sgmts)
-        clc;
-        fprintf('%d %d %s\n', i, j, listOfSong_pool{i});
-
-        x = extract_timbre_feature(sgmts{j}.audio', sgmts{j}.fs, w, h, 'mfcc');
-        Xtemp = [Xtemp; x'];
-
-        if (strcmp(songs_seg{i}{j}.label, 'chorus'))
+    nXtemp = numel(songs_seg{ri});
+    for j = 1 : numel(songs_seg{ri})
+        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})'];
+        if (strcmp(songs_seg{ri}{j}.label, 'chorus'))
             Ytrain = [Ytrain; 1];
         else
             Ytrain = [Ytrain; 0];
@@ -91,16 +85,12 @@ end
 Xvalidation = [];
 Yvalidation = [];
 for i = train_num + 1 : train_num + test_num
-    sgmts = audio_sgmt(listOfSong_pool{i}, songs_seg{i});
+    ri = rp(i);
     Xtemp = [];
-    nXtemp = length(sgmts);
-    for j = 1:length(sgmts)
-        clc;
-        fprintf('%d %d %s\n', i, j, listOfSong_pool{i});
-        x = extract_timbre_feature(sgmts{j}.audio', sgmts{j}.fs, w, h, 'mfcc');
-        Xtemp = [Xtemp; x'];
-
-        if (strcmp(songs_seg{i}{j}.label, 'chorus'))
+    nXtemp = numel(songs_seg{ri});
+    for j = 1 : numel(songs_seg{ri})
+        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})'];
+        if (strcmp(songs_seg{ri}{j}.label, 'chorus'))
             Yvalidation = [Yvalidation; 1];
         else
             Yvalidation = [Yvalidation; 0];
@@ -112,7 +102,7 @@ for i = train_num + 1 : train_num + test_num
     Xvalidation = [Xvalidation; Xtemp];
 end
 %% train classifier
-
+clc;
 g0 = 1/size(Xtrain, 2);
 Cs = [1 10 100 1000]; % possible range of the parameter C
 Gs = [g0 g0/10 g0/100]; % possible range of the parameter gamma
