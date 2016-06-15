@@ -1,0 +1,105 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "duration": 207.17714285714285,
+    "release": "",
+    "identifiers": {},
+    "jams_version": "0.2.1"
+  },
+  "annotations": [
+    {
+      "time": 0,
+      "duration": null,
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_tools": "",
+        "corpus": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "boundaries_id": "foote",
+        "m_median": 12,
+        "hier": false,
+        "feature": "hpcp",
+        "M_gaussian": 66,
+        "annot_beats": false,
+        "timestamp": "2016/06/15 22:12:18",
+        "framesync": false,
+        "labels_id": null,
+        "L_peaks": 64
+      },
+      "data": [
+        {
+          "time": 0.0,
+          "value": "@",
+          "duration": 30.511020000000002,
+          "confidence": null
+        },
+        {
+          "time": 30.511020000000002,
+          "value": "@",
+          "duration": 23.684354000000003,
+          "confidence": null
+        },
+        {
+          "time": 54.195374,
+          "value": "@",
+          "duration": 14.349932,
+          "confidence": null
+        },
+        {
+          "time": 68.54530600000001,
+          "value": "@",
+          "duration": 5.712109000000001,
+          "confidence": null
+        },
+        {
+          "time": 74.25741500000001,
+          "value": "@",
+          "duration": 28.003265000000003,
+          "confidence": null
+        },
+        {
+          "time": 102.26068000000001,
+          "value": "@",
+          "duration": 10.1239,
+          "confidence": null
+        },
+        {
+          "time": 112.38458000000001,
+          "value": "@",
+          "duration": 30.836100000000002,
+          "confidence": null
+        },
+        {
+          "time": 143.22068000000002,
+          "value": "@",
+          "duration": 26.563628,
+          "confidence": null
+        },
+        {
+          "time": 169.784308,
+          "value": "@",
+          "duration": 26.749388000000003,
+          "confidence": null
+        },
+        {
+          "time": 196.533695999,
+          "value": "A",
+          "duration": 10.643447,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open"
+    }
+  ]
+}

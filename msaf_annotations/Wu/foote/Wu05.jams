@@ -1,0 +1,99 @@
+{
+  "file_metadata": {
+    "artist": "",
+    "duration": 191.6342857142857,
+    "jams_version": "0.2.1",
+    "identifiers": {},
+    "release": "",
+    "title": ""
+  },
+  "sandbox": {},
+  "annotations": [
+    {
+      "duration": null,
+      "time": 0,
+      "data": [
+        {
+          "confidence": null,
+          "duration": 25.263311,
+          "time": 0.0,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 11.981497000000001,
+          "time": 25.263311,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 18.947483000000002,
+          "time": 37.244807,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 34.086893,
+          "time": 56.19229000000001,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 11.377778000000001,
+          "time": 90.279184,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 12.027937000000001,
+          "time": 101.65696100000001,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 37.894966000000004,
+          "time": 113.684898,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 26.517188,
+          "time": 151.57986400000001,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 13.537234000000002,
+          "time": 178.09705200000002,
+          "value": "A"
+        }
+      ],
+      "annotation_metadata": {
+        "annotator": {},
+        "annotation_tools": "",
+        "version": "0.0.3",
+        "validation": "",
+        "data_source": "MSAF",
+        "corpus": "",
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "m_median": 12,
+        "L_peaks": 64,
+        "labels_id": null,
+        "feature": "hpcp",
+        "hier": false,
+        "timestamp": "2016/06/15 22:14:32",
+        "boundaries_id": "foote",
+        "annot_beats": false,
+        "framesync": false,
+        "M_gaussian": 66
+      },
+      "namespace": "segment_open"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "duration": 202.18775510204082,
+    "release": "",
+    "identifiers": {},
+    "jams_version": "0.2.1"
+  },
+  "annotations": [
+    {
+      "time": 0,
+      "duration": null,
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_tools": "",
+        "corpus": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "boundaries_id": "foote",
+        "m_median": 12,
+        "hier": false,
+        "feature": "hpcp",
+        "M_gaussian": 66,
+        "annot_beats": false,
+        "timestamp": "2016/06/15 22:12:08",
+        "framesync": false,
+        "labels_id": null,
+        "L_peaks": 64
+      },
+      "data": [
+        {
+          "time": 0.0,
+          "value": "@",
+          "duration": 26.842268,
+          "confidence": null
+        },
+        {
+          "time": 26.842268,
+          "value": "@",
+          "duration": 13.653333000000002,
+          "confidence": null
+        },
+        {
+          "time": 40.495601,
+          "value": "@",
+          "duration": 40.216961000000005,
+          "confidence": null
+        },
+        {
+          "time": 80.712562,
+          "value": "@",
+          "duration": 12.956735,
+          "confidence": null
+        },
+        {
+          "time": 93.669297,
+          "value": "@",
+          "duration": 21.826757,
+          "confidence": null
+        },
+        {
+          "time": 115.496054,
+          "value": "@",
+          "duration": 26.610068000000002,
+          "confidence": null
+        },
+        {
+          "time": 142.106122,
+          "value": "@",
+          "duration": 49.086984,
+          "confidence": null
+        },
+        {
+          "time": 191.193107,
+          "value": "A",
+          "duration": 10.994649,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open"
+    }
+  ]
+}

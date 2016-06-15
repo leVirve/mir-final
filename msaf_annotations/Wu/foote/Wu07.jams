@@ -1,0 +1,171 @@
+{
+  "file_metadata": {
+    "artist": "",
+    "duration": 313.5738775510204,
+    "jams_version": "0.2.1",
+    "identifiers": {},
+    "release": "",
+    "title": ""
+  },
+  "sandbox": {},
+  "annotations": [
+    {
+      "duration": null,
+      "time": 0,
+      "data": [
+        {
+          "confidence": null,
+          "duration": 24.102313000000002,
+          "time": 0.0,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 15.000091000000001,
+          "time": 24.102313000000002,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 10.40254,
+          "time": 39.102404,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 17.925805,
+          "time": 49.504943000000004,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 16.625488,
+          "time": 67.43074800000001,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 12.538776,
+          "time": 84.056236,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 14.164172,
+          "time": 96.595011,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 23.730794000000003,
+          "time": 110.759184,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 24.613152000000003,
+          "time": 134.489977,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 14.582132000000001,
+          "time": 159.10312900000002,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 17.043447,
+          "time": 173.685261,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 12.538776,
+          "time": 190.728707,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 14.164172,
+          "time": 203.267483,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 13.328254000000001,
+          "time": 217.431655,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 5.851429,
+          "time": 230.75990900000002,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 20.387120000000003,
+          "time": 236.61133800000002,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 13.746213000000001,
+          "time": 256.998458,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 14.164172,
+          "time": 270.74467100000004,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 4.597551,
+          "time": 284.90884400000004,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 15.836009,
+          "time": 289.506395,
+          "value": "@"
+        },
+        {
+          "confidence": null,
+          "duration": 8.231474,
+          "time": 305.34240400000004,
+          "value": "A"
+        }
+      ],
+      "annotation_metadata": {
+        "annotator": {},
+        "annotation_tools": "",
+        "version": "0.0.3",
+        "validation": "",
+        "data_source": "MSAF",
+        "corpus": "",
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "m_median": 12,
+        "L_peaks": 64,
+        "labels_id": null,
+        "feature": "hpcp",
+        "hier": false,
+        "timestamp": "2016/06/15 22:14:34",
+        "boundaries_id": "foote",
+        "annot_beats": false,
+        "framesync": false,
+        "M_gaussian": 66
+      },
+      "namespace": "segment_open"
+    }
+  ]
+}

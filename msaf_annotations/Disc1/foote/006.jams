@@ -1,0 +1,111 @@
+{
+  "annotations": [
+    {
+      "sandbox": {
+        "timestamp": "2016/06/15 22:03:20",
+        "boundaries_id": "foote",
+        "feature": "hpcp",
+        "annot_beats": false,
+        "m_median": 12,
+        "labels_id": null,
+        "hier": false,
+        "M_gaussian": 66,
+        "framesync": false,
+        "L_peaks": 64
+      },
+      "annotation_metadata": {
+        "version": "0.0.3",
+        "annotator": {},
+        "data_source": "MSAF",
+        "curator": {
+          "email": "",
+          "name": ""
+        },
+        "annotation_rules": "",
+        "corpus": "",
+        "annotation_tools": "",
+        "validation": ""
+      },
+      "namespace": "segment_open",
+      "time": 0,
+      "duration": null,
+      "data": [
+        {
+          "time": 0.0,
+          "confidence": null,
+          "value": "@",
+          "duration": 18.111565000000002
+        },
+        {
+          "time": 18.111565000000002,
+          "confidence": null,
+          "value": "@",
+          "duration": 32.507937000000005
+        },
+        {
+          "time": 50.619501,
+          "confidence": null,
+          "value": "@",
+          "duration": 18.993923000000002
+        },
+        {
+          "time": 69.61342400000001,
+          "confidence": null,
+          "value": "@",
+          "duration": 9.473741
+        },
+        {
+          "time": 79.08716600000001,
+          "confidence": null,
+          "value": "@",
+          "duration": 22.476916000000003
+        },
+        {
+          "time": 101.56408200000001,
+          "confidence": null,
+          "value": "@",
+          "duration": 21.548118000000002
+        },
+        {
+          "time": 123.1122,
+          "confidence": null,
+          "value": "@",
+          "duration": 12.492336000000002
+        },
+        {
+          "time": 135.604535,
+          "confidence": null,
+          "value": "@",
+          "duration": 17.507846
+        },
+        {
+          "time": 153.112381,
+          "confidence": null,
+          "value": "@",
+          "duration": 30.975420000000003
+        },
+        {
+          "time": 184.08780000000002,
+          "confidence": null,
+          "value": "@",
+          "duration": 18.111565000000002
+        },
+        {
+          "time": 202.199365,
+          "confidence": null,
+          "value": "A",
+          "duration": 4.3739680000000005
+        }
+      ]
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "artist": "",
+    "title": "",
+    "jams_version": "0.2.1",
+    "release": "",
+    "duration": 206.57333333333332,
+    "identifiers": {}
+  }
+}

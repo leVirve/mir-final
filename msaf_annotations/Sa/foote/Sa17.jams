@@ -1,0 +1,171 @@
+{
+  "sandbox": {},
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "duration": 341.93333333333334,
+    "release": "",
+    "identifiers": {},
+    "jams_version": "0.2.1"
+  },
+  "annotations": [
+    {
+      "time": 0,
+      "duration": null,
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotation_tools": "",
+        "corpus": "",
+        "data_source": "MSAF",
+        "version": "0.0.3",
+        "annotator": {},
+        "validation": "",
+        "annotation_rules": ""
+      },
+      "sandbox": {
+        "boundaries_id": "foote",
+        "m_median": 12,
+        "hier": false,
+        "feature": "hpcp",
+        "M_gaussian": 66,
+        "annot_beats": false,
+        "timestamp": "2016/06/15 22:12:24",
+        "framesync": false,
+        "labels_id": null,
+        "L_peaks": 64
+      },
+      "data": [
+        {
+          "time": 0.0,
+          "value": "@",
+          "duration": 18.483084,
+          "confidence": null
+        },
+        {
+          "time": 18.483084,
+          "value": "@",
+          "duration": 4.597551,
+          "confidence": null
+        },
+        {
+          "time": 23.080635,
+          "value": "@",
+          "duration": 12.910295000000001,
+          "confidence": null
+        },
+        {
+          "time": 35.99093,
+          "value": "@",
+          "duration": 28.328345000000002,
+          "confidence": null
+        },
+        {
+          "time": 64.31927400000001,
+          "value": "@",
+          "duration": 9.195102,
+          "confidence": null
+        },
+        {
+          "time": 73.514376,
+          "value": "@",
+          "duration": 19.922721000000003,
+          "confidence": null
+        },
+        {
+          "time": 93.437098,
+          "value": "@",
+          "duration": 23.823673000000003,
+          "confidence": null
+        },
+        {
+          "time": 117.260770999,
+          "value": "@",
+          "duration": 3.715193,
+          "confidence": null
+        },
+        {
+          "time": 120.975964,
+          "value": "@",
+          "duration": 19.179683,
+          "confidence": null
+        },
+        {
+          "time": 140.15564600000002,
+          "value": "@",
+          "duration": 15.836009,
+          "confidence": null
+        },
+        {
+          "time": 155.991655,
+          "value": "@",
+          "duration": 8.777143,
+          "confidence": null
+        },
+        {
+          "time": 164.768798,
+          "value": "@",
+          "duration": 13.746213000000001,
+          "confidence": null
+        },
+        {
+          "time": 178.51501100000002,
+          "value": "@",
+          "duration": 12.538776,
+          "confidence": null
+        },
+        {
+          "time": 191.053787,
+          "value": "@",
+          "duration": 14.582132000000001,
+          "confidence": null
+        },
+        {
+          "time": 205.635918,
+          "value": "@",
+          "duration": 12.910295000000001,
+          "confidence": null
+        },
+        {
+          "time": 218.54621300000002,
+          "value": "@",
+          "duration": 14.164172,
+          "confidence": null
+        },
+        {
+          "time": 232.710385,
+          "value": "@",
+          "duration": 18.808163,
+          "confidence": null
+        },
+        {
+          "time": 251.518549,
+          "value": "@",
+          "duration": 16.207528,
+          "confidence": null
+        },
+        {
+          "time": 267.72607700000003,
+          "value": "@",
+          "duration": 42.864036000000006,
+          "confidence": null
+        },
+        {
+          "time": 310.59011300000003,
+          "value": "@",
+          "duration": 20.851519,
+          "confidence": null
+        },
+        {
+          "time": 331.441633,
+          "value": "A",
+          "duration": 10.491701,
+          "confidence": null
+        }
+      ],
+      "namespace": "segment_open"
+    }
+  ]
+}

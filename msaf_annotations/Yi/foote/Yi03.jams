@@ -1,0 +1,87 @@
+{
+  "annotations": [
+    {
+      "duration": null,
+      "namespace": "segment_open",
+      "annotation_metadata": {
+        "validation": "",
+        "annotator": {},
+        "annotation_tools": "",
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "data_source": "MSAF",
+        "corpus": "",
+        "version": "0.0.3",
+        "annotation_rules": ""
+      },
+      "time": 0,
+      "data": [
+        {
+          "value": "@",
+          "duration": 31.625578,
+          "time": 0.0,
+          "confidence": null
+        },
+        {
+          "value": "@",
+          "duration": 50.201542,
+          "time": 31.625578,
+          "confidence": null
+        },
+        {
+          "value": "@",
+          "duration": 16.718367,
+          "time": 81.82712000000001,
+          "confidence": null
+        },
+        {
+          "value": "@",
+          "duration": 68.35954600000001,
+          "time": 98.545488,
+          "confidence": null
+        },
+        {
+          "value": "@",
+          "duration": 31.254058999,
+          "time": 166.905034,
+          "confidence": null
+        },
+        {
+          "value": "@",
+          "duration": 29.071383,
+          "time": 198.159093,
+          "confidence": null
+        },
+        {
+          "value": "A",
+          "duration": 2.8038100000000004,
+          "time": 227.230476,
+          "confidence": null
+        }
+      ],
+      "sandbox": {
+        "framesync": false,
+        "boundaries_id": "foote",
+        "timestamp": "2016/06/15 22:16:27",
+        "annot_beats": false,
+        "M_gaussian": 66,
+        "feature": "hpcp",
+        "labels_id": null,
+        "m_median": 12,
+        "L_peaks": 64,
+        "hier": false
+      }
+    }
+  ],
+  "sandbox": {},
+  "file_metadata": {
+    "title": "",
+    "release": "",
+    "artist": "",
+    "duration": 230.03428571428572,
+    "jams_version": "0.2.1",
+    "identifiers": {}
+  }
+}
