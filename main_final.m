@@ -429,4 +429,81 @@ avg = avg / num_songs_raw;
 fprintf('Average: %f\n', avg);
 
 
+%%
+load('score_song_cnmf_iter1.mat');
+avg_F = 0;
+ct = 0;
+for i = 1 : length(score_song)-1
+    if isempty(score_song{i}), continue; end
+    ct = ct + 1;
+    if ~isnan(score_song{i}.F)
+        avg_F = avg_F + score_song{i}.F;
+    end
+end
+avg_F = avg_F / ct;
+fprintf('CNMF Iter#1 - Avg F-measure: %f\n', avg_F);
 
+load('score_song_cnmf_iter2.mat');
+avg_F = 0;
+ct = 0;
+for i = 1 : length(score_song)-1
+    if isempty(score_song{i}), continue; end
+    ct = ct + 1;
+    if ~isnan(score_song{i}.F)
+        avg_F = avg_F + score_song{i}.F;
+    end
+end
+avg_F = avg_F / ct;
+fprintf('CNMF Iter#2 - Avg F-measure: %f\n', avg_F);
+
+load('score_song_cnmf_iter3.mat');
+avg_F = 0;
+ct = 0;
+for i = 1 : length(score_song)-1
+    if isempty(score_song{i}), continue; end
+    ct = ct + 1;
+    if ~isnan(score_song{i}.F)
+        avg_F = avg_F + score_song{i}.F;
+    end
+end
+avg_F = avg_F / ct;
+fprintf('CNMF Iter#3 - Avg F-measure: %f\n', avg_F);
+
+load('score_song_scluster_iter1.mat');
+avg_F = 0;
+ct = 0;
+for i = 1 : length(score_song)-1
+    if isempty(score_song{i}), continue; end
+    ct = ct + 1;
+    if ~isnan(score_song{i}.F)
+        avg_F = avg_F + score_song{i}.F;
+    end
+end
+avg_F = avg_F / ct;
+fprintf('Scluster Iter#1 - Avg F-measure: %f\n', avg_F);
+
+load('score_song_scluster_iter2.mat');
+avg_F = 0;
+ct = 0;
+for i = 1 : length(score_song)-1
+    if isempty(score_song{i}), continue; end
+    ct = ct + 1;
+    if ~isnan(score_song{i}.F)
+        avg_F = avg_F + score_song{i}.F;
+    end
+end
+avg_F = avg_F / ct;
+fprintf('Scluster Iter#2 - Avg F-measure: %f\n', avg_F);
+
+load('score_song_scluster_iter3.mat');
+avg_F = 0;
+ct = 0;
+for i = 1 : length(score_song)-1
+    if isempty(score_song{i}), continue; end
+    ct = ct + 1;
+    if ~isnan(score_song{i}.F)
+        avg_F = avg_F + score_song{i}.F;
+    end
+end
+avg_F = avg_F / ct;
+fprintf('Scluster Iter#3 - Avg F-measure: %f\n', avg_F);
