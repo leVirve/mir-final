@@ -43,8 +43,8 @@ num_songs_svm = 60;
 num_songs_raw = 45;
 
 rp = randperm(num_songs_all);
-index_songs_svm = rp(1:num_songs_svm);
-index_songs_raw = rp(num_songs_svm + 1:num_songs_svm +num_songs_raw);
+id_songs_svm = rp(1 : num_songs_svm);
+id_songs_raw = rp(num_songs_svm + 1 : num_songs_svm +num_songs_raw);
 
 clear path_audio_rwc path_audio_ours  PATH_AUDITORY_TOOLBOX path_annotation rp;
 %%
@@ -64,19 +64,17 @@ for i = 1 : 2 : 3
    songs_seg = merge_struct_field(songs_seg, load(filename));
 end
 
-pool_num = num_songs_svm;
 train_num = round(num_songs_svm * 0.8);
 test_num = num_songs_svm - train_num;
 
-rp = randperm(pool_num);
-%%
+%% Partition for Training and Validation
 w = 1024;
 h = 512;
 
 Xtrain = [];
 Ytrain = [];
 for i = 1 : train_num
-    ri = rp(i);
+    ri = id_songs_svm(i);
     Xtemp = [];
     nXtemp = numel(songs_seg{ri});
     for j = 1 : numel(songs_seg{ri})
@@ -93,12 +91,10 @@ for i = 1 : train_num
     Xtrain = [Xtrain; Xtemp];
 end
 
-%%
-
 Xvalidation = [];
 Yvalidation = [];
 for i = train_num + 1 : train_num + test_num
-    ri = rp(i);
+    ri = id_songs_svm(i);
     Xtemp = [];
     nXtemp = numel(songs_seg{ri});
     for j = 1 : numel(songs_seg{ri})
@@ -129,8 +125,8 @@ bestModel = {};
 bestC = nan;
 bestG = nan;
 
-for c=1:length(Cs)
-    for g=1:length(Gs)
+for c = 1 : length(Cs)
+    for g = 1 : length(Gs)
 
         model = svmtrain(Ytrain, Xtrain, sprintf('-t 2 -c %f -g %f -q', Cs(c), Gs(g))); % quiet mode
 
