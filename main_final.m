@@ -230,6 +230,29 @@ for i = 1 : num_songs_raw
 end
 
 
+%% Demo generating block
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Manual control above code to generate demo clips
+%
+%  1. choose `algorithm` for sgmts: cnmf, scluster
+%  2. set `ri` for `Ypred` result
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ri = 26;
+song = songs_seg_raw{ri};
+clips = cell(size(song));
+for i = 1:length(Ypred)
+    if Ypred(i)
+        s = ceil(song{i}.start * fs);
+        if(s == 0)
+            s = 1;
+        end
+        e = floor((song{i}.start + song{i}.duration) * fs);
+        clips{i} = audio(s:e);
+        audiowrite(sprintf('song_%d_clip_%d.wav', ri, i), clips{i}, fs);
+    end
+end
+
 
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
