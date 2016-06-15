@@ -1,4 +1,4 @@
-function [feature, raw] = extract_timbre_feature(audio, fs, w, h, mode)
+function [feature, raw] = extract_features(audio, fs, w, h, mode)
     % file: file name
     % w: window size (in samples)
     % h: hop size (in samples)
