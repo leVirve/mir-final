@@ -41,7 +41,7 @@ songs_seg = get_gt_sgmts(listOfAnnotations);
 Timbre = {'mfcc', 'brightness', 'zerocorss', 'rolloff', 'centroid', 'spread', 'skewness',...
             'kurtosis', 'flatness', 'entropy', 'attackslope', 'attacktime', 'attackleap'};
 
-for i = 1 : 2 : 3
+for i = 10 : 1 : 10
    filename = sprintf('songs_seg_%s.mat', Timbre{i});
    songs_seg = merge_struct_field(songs_seg, load(filename));
 end
@@ -68,7 +68,9 @@ for i = 1 : train_num
     Xtemp = [];
     nXtemp = numel(songs_seg{ri});
     for j = 1 : numel(songs_seg{ri})
-        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})'];
+        % Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})'];
+        % Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{3})'];
+        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{10})'];
         if (strcmp(songs_seg{ri}{j}.label, 'chorus'))
             Ytrain = [Ytrain; 1];
         else
@@ -89,7 +91,9 @@ for i = train_num + 1 : train_num + test_num
     Xtemp = [];
     nXtemp = numel(songs_seg{ri});
     for j = 1 : numel(songs_seg{ri})
-        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})'];
+        % Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})'];
+        % Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{3})'];
+        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{10})'];
         if (strcmp(songs_seg{ri}{j}.label, 'chorus'))
             Yvalidation = [Yvalidation; 1];
         else
@@ -135,9 +139,9 @@ end
 % from Ypred and Yvalidation you can create the confusion tlabe
 [Ypred, accuracy, ~] = svmpredict(Yvalidation, Xvalidation, bestModel);
 
- ConfusionTable = zeros(4, 4);
+ ConfusionTable = zeros(2, 2);
 
 for i = 1 : size(Ypred, 1)
-    ConfusionTable(Yvalidation(i), Ypred(i)) = ConfusionTable(Yvalidation(i), Ypred(i)) + 1;
+    ConfusionTable(Yvalidation(i)+1, Ypred(i)+1) = ConfusionTable(Yvalidation(i)+1, Ypred(i)+1) + 1;
 end
 

@@ -1,23 +1,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This main function will execute all of the steps below step by step:
-%     1. Initialization
-%     2. Feature Extraction (for GT tracks) 
-%     3. Generate SVM Model
-%     4. Two Segmentation Algorithm (C-NMF, S-Cluster)
-%     5. GMM (or K-means) -> optional
-%     6. Apply SVM Models
-%     7. Calculate F-Measure (F-Score)
+% 1. Initialization
+% 2. Feature Extraction  
+% 3. Generate SVM Model
+% 4. two segmentation algo
+% 5. GMM (and K-means)
+% 6. apply SVM Models
+% 7. f-measure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clc; clear all; close all;
-mirwaitbar(0);
 
+clc; clear all; close all;
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 1. Initialization                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% setup paths of tool box
-set_toolbox();
+% load all files
+[PATH_AUDITORY_TOOLBOX] = get_env_variables();
 
 path_audio_rwc  = './rwc48mp3';
 path_audio_ours = './Label Dataset(song)';
@@ -80,10 +78,14 @@ Xtrain = [];
 Ytrain = [];
 for i = 1 : train_num
     ri = id_songs_svm(i);
+
+    
     Xtemp = [];
     nXtemp = numel(songs_seg{ri});
     for j = 1 : numel(songs_seg{ri})
-        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})'];
+
+        xr = feature_repeated_sgmt(songs_seg{ri}, j,{'chorus', 'verse', 'intro', 'ending', 'bridge', 'inter', 'pre-chorus', 'post-chorus'});
+        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})' xr];
         if (strcmp(songs_seg{ri}{j}.label, 'chorus'))
             Ytrain = [Ytrain; 1];
         else
@@ -103,7 +105,8 @@ for i = train_num + 1 : train_num + test_num
     Xtemp = [];
     nXtemp = numel(songs_seg{ri});
     for j = 1 : numel(songs_seg{ri})
-        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})'];
+        xr = feature_repeated_sgmt(songs_seg{ri}, j,{'chorus', 'verse', 'intro', 'ending', 'bridge', 'inter', 'pre-chorus', 'post-chorus'});
+        Xtemp = [Xtemp; songs_seg{ri}{j}.(Timbre{1})' songs_seg{ri}{j}.(Timbre{3})' xr];
         if (strcmp(songs_seg{ri}{j}.label, 'chorus'))
             Yvalidation = [Yvalidation; 1];
         else
@@ -204,12 +207,13 @@ clear i j fid seg_algo sgmt_amount path_json fname data
 w = 1024;
 h = 512;
 
-for i = 1 : 1 % num_songs_raw
 % for i = 1 : num_songs_raw
+for i = 1 : 1
+    disp(i);
     Xtest = [];
     Ytest = [];
-    ri = 86; %id_songs_raw(i);
 %     ri = id_songs_raw(i);
+    ri = 86;
     [audio, fs] = audioread(listOfSongs{ri});
     nXtest = numel(songs_seg_raw{ri});
     
@@ -223,7 +227,8 @@ for i = 1 : 1 % num_songs_raw
         audio_temp = audio(s:e);
         x1 = extract_features(audio_temp', fs, w, h, 'mfcc');
         x2 = extract_features(audio_temp', fs, w, h, 'zerocorss');
-        Xtest = [Xtest; x1' x2'];
+        xr = feature_repeated_sgmt(songs_seg_raw{ri}, j,{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'});
+        Xtest = [Xtest; x1' x2' xr];
         Ytest = [Ytest; 1];
     end
     featMean = mean(Xtest);
@@ -235,7 +240,6 @@ for i = 1 : 1 % num_songs_raw
         songs_seg_raw{ri}{j}.pred = Ypred(j);
     end
 end
-
 
 %% Demo generating block
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -263,98 +267,7 @@ end
 
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 7. Evaluating of Precision, Recall, F-Measure
-%     Denote:
-%         N:   Total number of frames(Fs * Time / win).
-%         Na:  Number of states in the annotated segmentation. (2)
-%         Ne:  Number of states in the estimated segmentation. (2)
-%         nij: Number of frames simultaneously belong to the
-%               state i in the annotated segmentation and to the state j
-%               in the estimated one.
-%         nia: Total number of frames, that belong to the state i in 
-%               the ground-truth segmentation
-%         nie: Total number of frames belonging to the state j in the 
-%               automatic segmentation
-%         rje:
-%             rje = 0;
-%             for i = 1 : Na
-%                 rje = rje + ((nij * nij) / (nje * nje));
-%             end
-%         acp:
-%             acp = 0;  
-%             for i = 1 : Ne
-%                 acp = acp + (rje * nje);
-%             end
-%             acp = acp / N;
-%         ria:
-%             ria = 0;
-%             for i = 1 : Ne
-%                 ria = ria + ((nij * nij) / (nia * nia))
-%             end
-%         asp:
-%             asp = 0;
-%             for i = 1 : Na
-%                 asp = asp + ((ria * ria) * (nia * nia));
-%             end
-%             asp = asp / N;
-%         pij:
-%             pij = 0;
-%             for i = 1 : Na
-%                 for j = 1 : Ne
-%                     pij = pij + nij;
-%                 end
-%             end
-%             pij = 1 / pij;
-%         pia:
-%             pia = 0;
-%             for i = 1 : Na
-%                 for j = 1 : Ne
-%                     pia = pia + nij;
-%                 end
-%             end
-%             pia = 1 / pia; 
-%         pje:
-%             pje = 0;
-%             for i = 1 : Na
-%                 for j = 1 : Ne
-%                     pje = pje + nij;
-%                 end
-%             end
-%             pje = 1 / pje;
-%         pij_ae:
-%             pij_ae = nij / nje;
-%         pji_ea:
-%             pji_ea = nij / nia;
-%         H_EA:
-%             sum = 0;
-%             for i = 1 : Na
-%                 inter = 0;
-%                 for j = 1 : Ne
-%                     inter = inter + pji_ea * log2(pji_ea);
-%                 end
-%                 inter = inter * pia;
-%                 sum = sum + inter;
-%             end
-%             sum = sum * -1;
-%         H_AE:
-%             sum = 0;
-%             for j = 1 : Ne
-%                 inter = 0;
-%                 for i = 1 : Na
-%                     inter = inter + pij_ae * log2(pij_ae);
-%                 end
-%                 inter = inter * pje;
-%                 sum = sum + inter;
-%             end
-%             sum = sum * -1;
-%         So:
-%             So = 1 - (H_EA / log2(Ne));
-%         Su:
-%             Su = 1 - (H_AE / log2(Na));
-%         I_AE:
-%             I_AE = H_E - H_EA;
-%         H_E:
-%             to be discussed.
+% 7. Evaluating of Precision, Recall, F-Measure                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Na = 2;
 Ne = 2;
@@ -458,119 +371,6 @@ end
 avg = avg / num_songs_raw;
 fprintf('Average: %f\n', avg);
 
-
 %%
-clc;
-load('score_song_cnmf_iter1.mat');
-avg_F = 0;
-ct = 0;
-min_F = 5;
-max_F = -1;
-for i = 1 : length(score_song)-1
-    if isempty(score_song{i}), continue; end
-    ct = ct + 1;
-    if ~isnan(score_song{i}.F)
-        if score_song{i}.F < min_F, min_F = score_song{i}.F; end
-        if score_song{i}.F > max_F, max_F = score_song{i}.F; end
-        avg_F = avg_F + score_song{i}.F;
-    end
-end
-avg_F = avg_F / ct;
-fprintf('C-NMF Iter#1\tAvg F-measure: %f\n', avg_F);
-fprintf('\tWorst F-measure: %f\n', min_F);
-fprintf('\tBest F-measure: %f\n', max_F);
 
-load('score_song_cnmf_iter2.mat');
-avg_F = 0;
-ct = 0;
-min_F = 5;
-max_F = -1;
-for i = 1 : length(score_song)-1
-    if isempty(score_song{i}), continue; end
-    ct = ct + 1;
-    if ~isnan(score_song{i}.F)
-        if score_song{i}.F < min_F, min_F = score_song{i}.F; end
-        if score_song{i}.F > max_F, max_F = score_song{i}.F; end
-        avg_F = avg_F + score_song{i}.F;
-    end
-end
-avg_F = avg_F / ct;
-fprintf('C-NMF Iter#2\tAvg F-measure: %f\n', avg_F);
-fprintf('\tWorst F-measure: %f\n', min_F);
-fprintf('\tBest F-measure: %f\n', max_F);
 
-load('score_song_cnmf_iter3.mat');
-avg_F = 0;
-ct = 0;
-min_F = 5;
-max_F = -1;
-for i = 1 : length(score_song)-1
-    if isempty(score_song{i}), continue; end
-    ct = ct + 1;
-    if ~isnan(score_song{i}.F)
-        if score_song{i}.F < min_F, min_F = score_song{i}.F; end
-        if score_song{i}.F > max_F, max_F = score_song{i}.F; end
-        avg_F = avg_F + score_song{i}.F;
-    end
-end
-avg_F = avg_F / ct;
-fprintf('C-NMF Iter#3\tAvg F-measure: %f\n', avg_F);
-fprintf('\tWorst F-measure: %f\n', min_F);
-fprintf('\tBest F-measure: %f\n', max_F);
-
-load('score_song_scluster_iter1.mat');
-avg_F = 0;
-ct = 0;
-min_F = 5;
-max_F = -1;
-for i = 1 : length(score_song)-1
-    if isempty(score_song{i}), continue; end
-    ct = ct + 1;
-    if ~isnan(score_song{i}.F)
-        if score_song{i}.F < min_F, min_F = score_song{i}.F; end
-        if score_song{i}.F > max_F, max_F = score_song{i}.F; end
-        avg_F = avg_F + score_song{i}.F;
-    end
-end
-avg_F = avg_F / ct;
-fprintf('Scluster Iter#1\tAvg F-measure: %f\n', avg_F);
-fprintf('\tWorst F-measure: %f\n', min_F);
-fprintf('\tBest F-measure: %f\n', max_F);
-
-load('score_song_scluster_iter2.mat');
-avg_F = 0;
-ct = 0;
-min_F = 5;
-max_F = -1;
-for i = 1 : length(score_song)-1
-    if isempty(score_song{i}), continue; end
-    ct = ct + 1;
-    if ~isnan(score_song{i}.F)
-        if score_song{i}.F < min_F, min_F = score_song{i}.F; end
-        if score_song{i}.F > max_F, max_F = score_song{i}.F; end
-        avg_F = avg_F + score_song{i}.F;
-    end
-end
-avg_F = avg_F / ct;
-fprintf('Scluster Iter#2\tAvg F-measure: %f\n', avg_F);
-fprintf('\tWorst F-measure: %f\n', min_F);
-fprintf('\tBest F-measure: %f\n', max_F);
-
-load('score_song_scluster_iter3.mat');
-avg_F = 0;
-ct = 0;
-min_F = 5;
-max_F = -1;
-for i = 1 : length(score_song)-1
-    if isempty(score_song{i}), continue; end
-    ct = ct + 1;
-    if ~isnan(score_song{i}.F)
-        if score_song{i}.F < min_F, min_F = score_song{i}.F; end
-        if score_song{i}.F > max_F, max_F = score_song{i}.F; end
-        avg_F = avg_F + score_song{i}.F;
-    end
-end
-avg_F = avg_F / ct;
-fprintf('Scluster Iter#3\tAvg F-measure: %f\n', avg_F);
-fprintf('\tWorst F-measure: %f\n', min_F);
-fprintf('\tBest F-measure: %f\n', max_F);

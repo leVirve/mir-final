@@ -1,5 +1,6 @@
 %% clean
 clc; clear all; close all;
+mirwaitbar(0);
 
 %% set path
 [PATH_AUDITORY_TOOLBOX] = get_env_variables();
@@ -25,9 +26,11 @@ listOfSongs = [
     listfile(fullfile(path_audio_ours, 'Yi'))';
     listfile(fullfile(path_audio_ours, 'Wu'))';
 ];
-
-Timbre = {'mfcc', 'brightness', 'zerocorss', 'rolloff', 'centroid', 'spread', 'skewness',...
-            'kurtosis', 'flatness', 'entropy', 'attackslope', 'attacktime', 'attackleap'};
+%           1           2            3           4          5           6
+Timbre = {'mfcc', 'brightness', 'zerocorss', 'rolloff', 'centroid', 'spread',...
+          'skewness', 'kurtosis', 'flatness', 'entropy', 'attackslope',...
+          'attacktime', 'attackleap'};
+%              12            13
 
 clear path_audio_rwc path_audio_ours;
 %% Segmentatoin Algo
@@ -46,12 +49,13 @@ chroma_params.w = w;
 chroma_params.gamma = 10;
 chroma_params.visualize = 0;
 
-for k = 1 : 1 %length(Timbre)
+for k = 14 : 14 %length(Timbre)
     for i = 1 : length(listOfSongs)
+        disp(i);
         sgmts = audio_sgmt(listOfSongs{i}, songs_seg{i});
         for j = 1 : length(sgmts)
 %             songs_seg{i}{j}.chroma = gen_chroma(sgmts{j}.audio', chroma_params);
-            songs_seg{i}{j}.(Timbre{k}) = extract_timbre_feature(sgmts{j}.audio', sgmts{j}.fs, w, h, Timbre{k});
+            songs_seg{i}{j}.(Timbre{k}) = extract_features(sgmts{j}.audio', sgmts{j}.fs, w, h, Timbre{k});
         end
     end
     filename = sprintf('songs_seg_%s.mat', Timbre{k});

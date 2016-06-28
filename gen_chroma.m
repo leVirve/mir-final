@@ -1,7 +1,7 @@
 function [chroma] = gen_chroma(f_audio, params)
-
-    [PATH_AUDITORY_TOOLBOX] = get_env_variables();
-    rmpath(PATH_AUDITORY_TOOLBOX);
+    % since chromagram needs another version of specific function in the
+    % Auditory Toolbox, we need to remove the old one first
+    rmpath('./toolbox/AuditoryToolbox');
 
     shiftFB = estimateTuning(f_audio);
 
@@ -15,5 +15,6 @@ function [chroma] = gen_chroma(f_audio, params)
     paramCLP.visualize = params.visualize;
     [chroma, ~] = pitch_to_chroma(f_pitch, paramCLP, sideinfo);
 
-    addpath(PATH_AUDITORY_TOOLBOX);
+    % after calculating the chromagram, we now add the Auditory Toolbox back
+    addpath('./toolbox/AuditoryToolbox');
 end
