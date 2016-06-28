@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+					Loudness Toolbox Change Log
+						WWW.GENESIS.FR
+-------------------------------------------------------------------------------
+
+Support: loudness@genesis.fr
+
+April, 2012
+================================
+Release 1.2 of the Loudness Toolbox
+Loudness_TimeVaryingSound_Moore, Loudness_ANSI_S34_2007: error of unit when calling gene_A_Parameter_ANSI_S34_2007 and gene_AlphaParameter_ANSI_S34_2007.
+Loudness_TimeVaryingSound_Zwicker: error on BarkAxis filling
+Loudness_TimeVaryingSound_Zwicker: issue when saving InstantaneousSpecificLoudness parameter
+gene_A_Parameter_ANSI_S34_2007: wrong reference in documentation
+
+May, 2011
+================================
+Release 1.1 of the Loudness Toolbox
+gene_FiltersBC: correction of a bug for sampling frequencies different from 48000 Hz
+gene_RTx: minor optimization
+Loudness_ANSI_S34_2007: test sinus takes in account FFT size
+Loudness_ANSI_S34_2007: use of pwelch rather than psd
+Loudness_LMIS: Modification of the computation
+Loudness_TimeVaryingSound_Zwicker: Large modification of the algorithm
+Compute levels thanks Christophe Couvreur's Third OCtave level Computation
+Frequency step increased to 0.1 bark
+Based on the implementation proposed in 1991 by Fastl (same implementation than for the stationnary loudness)
+
+January, 2010
+================================
+Release 1.0 of the Loudness Toolbox.
+First release of the toolbox for Matlab.
+
+CHANGES SINCE 1.0 - YYYY/MM/DD
+================================
+Changes will appear here in the future.
